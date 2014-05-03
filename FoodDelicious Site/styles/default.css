@@ -1,0 +1,634 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, 
+address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, 
+tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	letter-spacing: 0.02em;
+	font-family: 'RobotoLight' ,Sans-Serif;
+}
+.imgH {
+   margin: 10px 10px 10px 10px;
+}
+a, img
+{
+	border-style: none;
+	border-color: inherit;
+	border-width: medium;
+	color: #00a1e4;
+	text-decoration: none;
+	width: 2px;
+}
+/* remember to define focus styles! */
+/*:focus {
+	outline: 0;
+}*/
+body
+{
+	color: #8a8c8e;
+	background-color: #f3f6f6;
+}
+html, body
+{
+	height: 100%;
+}
+ol, ul
+{
+	list-style: none;
+    height: 55px;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table
+{
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td
+{
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after, q:before, q:after
+{
+	content: "";
+}
+blockquote, q
+{
+	quotes: "" "";
+}
+form
+{
+	height: 100%;
+}
+
+.wrapper
+{
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: -135px auto -20px; /* the bottom margin is the negative value of the footer's height */
+}
+.push
+{
+	height: 20px;
+	clear: both;
+}
+
+.hdr
+{
+	width: 100%;
+	height: 97px;
+	z-index: 1000;
+	background: url(../images/logo_whitebg.png) 90% 0 no-repeat;
+}
+.container
+{
+	padding-top: 145px;
+	margin: 0 auto;
+	width: 1000px;
+}
+
+.ftr
+{
+	height: 20px;
+	width: 100%;
+	clear: both;
+}
+/*============================== Login Page============================*/
+.hdrContainer
+{
+	height: 290px;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.hdr_logo
+{
+	position: relative;
+	float: right;
+	margin: 15px 0px;
+}
+
+#logo_img
+{
+	width: 305px;
+	height: 45px;
+}
+.dd {
+    margin-top :0px;
+}
+.d1 {
+    font-size :16px;
+    font-weight :bold ;
+    color :yellow ;
+   
+}
+.hdr_intra
+{
+    
+	float: left;
+	height: 101px;
+    width: 180px;
+     /*margin-bottom :120px;*/
+}
+
+.hdr_intraportal
+{
+	width: 180px;
+	height: 58px;
+	/*background: url(../images/intrasight_txtbottomborder.png) 10px 30px no-repeat;*/
+	font-family: 'RobotoBold' ,Sans-Serif;
+	font-weight: normal;
+    float :left ;
+	font-size: 25px;
+	color: #231f20;
+	margin-top: 0px;
+   
+}
+
+
+
+#txtlogo_img
+{
+	position: relative;
+	height: 20px;
+	width: 20px;
+}
+.hdr_nav
+{
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 12px;
+	background-color: #00a1e4;
+	position: relative;
+	float: left;
+	width: 976px;
+	min-height: 1px;
+    top: 0px;
+    left: 0px;
+    height: 25px;
+}
+
+.ftr_container
+{
+	margin: 0 auto;
+	height: 100%;
+	width: 1000px;
+}
+
+
+.ftr_nav
+{
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding: 12px;
+	background-color: #00a1e4;
+	width: 976px;
+	min-height: 1px;
+}
+.btnC {
+    margin-left :4px;
+    margin-top :5px;
+    width :36px;
+    }
+.btnC1 {
+    margin-left :0px;
+    margin-top :5px;
+    width :36px;
+}
+.div1 {
+
+}
+.txt1 {
+    
+    margin-left :500px;
+}
+.pnl1 {
+    width:220px;
+    margin-left :500px;
+    float :left ;
+    margin-bottom :20px;
+}
+.pnl2 {
+    float :left ;
+    width :40px;
+    margin-bottom :20px;
+}
+.lnkbtn {
+    float :right ;
+}
+.welcometxt_box
+{
+	margin: 20px auto 0;
+	width: 636px;
+    margin-top :80px;
+}
+
+.welcome_txt
+{
+	height: 70px;
+	background: url(../images/welcometxt_bg.png) 50% 35px no-repeat;
+	font-family: 'RobotoThin' ,Sans-Serif;
+	font-weight: normal;
+	font-size: 25px;
+	color: #231f20;
+	text-align: center;
+}
+
+
+.loginbox
+{
+	border: 1px solid #00a1e4;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	width: 350px;
+	margin: 0 auto;
+	padding: 15px 15px 40px 15px;
+	background-color: White;
+    margin-bottom: 10px;
+}
+.loginbox1
+{
+	border: 1px solid #00a1e4;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+    height :200px;
+	width: 300px;
+	margin: 0 auto;
+	padding: 15px 15px 20px 15px;
+	background-color: White;
+    margin-bottom: 0px;
+    float :left ;
+}
+
+.logintxt_box
+{
+	border-bottom: 2px solid #ccecfa;
+}
+
+h1
+{
+	font-family: 'RobotoBold' ,Sans-Serif;
+	font-weight: normal;
+	font-size: 25px;
+	color: #231f20;
+	padding-bottom: 15px;
+}
+
+.username
+{
+	font-family: 'RobotoLight' , Sans-Serif;
+	font-size: 14px;
+	font-weight: normal;
+	color: #8a8c8f;
+	display: table;
+	margin-top: 20px;
+}
+.labelcontrol
+{
+	float: left;
+	padding-top: 5px;
+	display: block;
+    color :black ;
+	margin-bottom: 15px;
+	line-height: 18px;
+	text-align: left;
+}
+.label_info
+{
+	height: 20px;
+	margin-top: 5px;
+	margin-left: 140px;
+}
+.label_info input[type="text"]
+{
+	width: 200px;
+	height: 20px;
+	background-color: #FFFFFF;
+	padding: 2px 2px;
+	vertical-align: middle;
+	border: 1px solid #cce6f5;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+
+.label_info input[type="password"]
+{
+	width: 200px;
+	height: 20px;
+	background-color: #FFFFFF;
+	padding: 2px 2px;
+	vertical-align: middle;
+	border: 1px solid #cce6f5;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.passforgot
+{
+	margin-left: 115px;
+	font-family: 'RobotoLight' , Sans-Serif;
+	font-size: 12px;
+	font-weight: normal;
+}
+.error_handler
+{
+	font-family: 'RobotoLight' , Sans-Serif;
+	color: red;
+	font-size: 12px;
+	font-weight: normal;
+	margin: 15px auto;
+	position: relative;
+	float: left;
+	text-align: center;
+	width: 340px;
+}
+
+.login_btn
+{
+	margin: 0;
+	padding: 6px 20px;
+	background: #363636 url(../images/login_bg.png) repeat-x;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	font-family: 'RobotoMedium' , Sans-Serif;
+	font-size: 13px;
+	font-weight: normal;
+	color: #FFF;
+	clear: both;
+}
+
+.login_btn:hover
+{
+	color: white;
+	background-image: none;
+}
+
+/*========================================= User Status  ====================================*/
+
+.usertask_box
+{
+	border-bottom: 1px solid #c2dfed;
+	width: 1000px;
+}
+
+h1
+{
+	font-family: 'RobotoBold' ,Sans-Serif;
+	font-weight: normal;
+	font-size: 20px;
+	color: #231f20;
+	padding-bottom: 15px;
+}
+
+.status
+{
+	font-family: 'RobotoLight' , Sans-Serif;
+	font-size: 14px;
+	font-weight: normal;
+	color: #8a8c8f;
+	display: table;
+	margin-top: 30px;
+}
+.statuslabel_control
+{
+	float: left;
+	padding-top: 5px;
+	display: block;
+	margin-bottom: 15px;
+	line-height: 18px;
+	text-align: left;
+}
+.statuslabel_info
+{
+	height: 20px;
+	margin-top: 5px;
+	margin-left: 115px;
+}
+
+.statuslabel_info input[type="text"]
+{
+	width: 220px;
+	height: 25px;
+	background-color: #FFFFFF;
+	padding: 2px 2px;
+	vertical-align: middle;
+	border: 1px solid #c2dfed;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+
+
+.startdate
+{
+	font-family: 'RobotoLight' , Sans-Serif;
+	font-size: 14px;
+	font-weight: normal;
+	color: #8a8c8f;
+	display: table;
+	margin-top: 15px;
+}
+.sdatelabel_control
+{
+	float: left;
+	padding-top: 5px;
+	display: block;
+	margin-bottom: 15px;
+	line-height: 18px;
+	text-align: left;
+}
+.sdatelabel_info
+{
+	height: 20px;
+	margin-top: 5px;
+	margin-left: 115px;
+}
+
+.sdatelabel_info input[type="text"]
+{
+	width: 220px;
+	height: 25px;
+	background-color: #FFFFFF;
+	padding: 2px 2px;
+	vertical-align: middle;
+	border: 1px solid #c2dfed;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+
+
+.enddate
+{
+	font-family: 'RobotoLight' , Sans-Serif;
+	font-size: 14px;
+	font-weight: normal;
+	color: #8a8c8f;
+	display: table;
+	margin-top: 15px;
+}
+.edatelabel_control
+{
+	float: left;
+	padding-top: 5px;
+	display: block;
+	margin-bottom: 15px;
+	line-height: 18px;
+	text-align: left;
+}
+.edatelabel_info
+{
+	height: 20px;
+	margin-top: 5px;
+	margin-left: 115px;
+}
+
+.edatelabel_info input[type="text"]
+{
+	width: 220px;
+	height: 25px;
+	background-color: #FFFFFF;
+	padding: 2px 2px;
+	vertical-align: middle;
+	border: 1px solid #c2dfed;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.save_btn
+{
+	margin: 0;
+	padding: 6px 20px;
+	background: #363636 url(../images/login_bg.png) repeat-x;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	font-family: 'RobotoMedium' , Sans-Serif;
+	font-size: 13px;
+	font-weight: normal;
+	color: #FFF;
+	clear: both;
+}
+
+.save_btn:hover
+{
+	color: white;
+	background-image: none;
+}
+.GrdHdr
+{
+	height: 38px;
+	background-color: #c2dfed;
+	width: 110px;
+	padding :2px 0px 2px 0px;
+	font-family :'RobotoMedium' , Sans-Serif;
+	font-weight :normal ;
+	font-size :13px;
+	color:Black ;
+	
+}
+.courseInfoContainer
+{
+	width:1000px; clear:both;
+}
+.grdCourse
+{
+	width: 1000px;
+	margin-top: 10px;
+	
+	border: 0px solid #00a1e4;
+	background-color: White;
+	display: table;
+}
+.grdCourse tr,.grdCourse td,.grdCourse tr th
+{
+	border : 1px solid #00a1e4
+}
+.rowGrid
+{
+	height: 30px;
+	
+}
+.cs
+{
+	padding-right: 5px;
+	padding-left: 5px;
+	text-align: center;
+}
+.cs1
+{
+	padding-right: 5px;
+	padding-left: 5px;
+	width: 100px;
+	text-align: center;
+}
+/*                  Search CSS               */
+ul.nav-main11, ul.nav-main11 li
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+ul.nav-main11
+{
+	position: relative;
+	z-index: 597;
+}
+ul.nav-main11 li:hover > ul
+{
+	visibility: visible;
+}
+
+ul.nav-main11 li.hover, ul.nav-main11 li:hover
+{
+	position: relative;
+	z-index: 599;
+	cursor: pointer;
+}
+
+ul.nav-main11 li
+{
+	float: left;
+	display: inline;
+	height: 15px;
+	/*color: #3d3d3d;*/
+	font: 14px Arial, Helvetica, sans-serif;
+}
+
+ul.nav-main11 li a
+{
+	display: inline;
+	padding-left: 7px;
+	padding-right: 7px;
+	height: 15px;
+	color: #3d3d3d;
+	font: 12px Arial,Helvetica, sans-serif;
+	text-decoration: none;
+}
+
+
+ul.nav-main11 li a:hover
+{
+	color: #3f5eae;
+	
+}

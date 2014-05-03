@@ -1,0 +1,143 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI.WebControls;
+using System.Data;
+using System.Globalization;
+using System.Threading;
+using System.ComponentModel;
+using System.Configuration;
+using System.Web.Services;
+using System.Net;
+using System.Xml;
+using System.Xml.Linq;
+using System.Xml.XPath;
+using System.Data.SqlClient;
+using System.Net.Mail;
+using System.Collections;
+using System.Web.Configuration;
+using System.Web.UI.HtmlControls;
+using Microsoft.VisualBasic;
+using System.Data.Sql;
+using System.Diagnostics;
+using System.IO;
+using Google.GData.Client;
+using Google.GData.Calendar;
+using Google.GData.Extensions;
+using FacebookAPI;
+using FacebookAPI.Base;
+using FacebookAPI.FacebookProperties;
+using FacebookAPI.Managers;
+using FacebookAPI.Objects;
+using Facebook;
+
+//Acc: fooddelicioussjsu@gmail.com
+//Pass: 4085120350
+public partial class Review : System.Web.UI.Page
+{
+    public void Page_Load(object sender, EventArgs e)
+    {
+        if ((!Page.IsPostBack))
+        
+            BindHotels();
+        //else
+        //    CheckAuthorization();
+            
+        //   // if (Session["Fb"] != null)
+        //     //   CheckAuthorization();
+        //}
+        //string ss = "S";
+        if (Session["Fb"] != null)
+            //    ss=Session["Fb"].ToString ();
+            CheckAuthorization();
+        //if (ss == "Set" )
+        //{
+        //    CheckAuthorization();
+        //    Session ["Fb"]="";
+        //}
+        
+            
+      //  Session["Fb"] = "Set";
+               
+    }
+    private void CheckAuthorization()
+    {
+        string app_id = "233563306817352";
+        string app_secret = "a8b47cd18eacb0d39567e9607d3ce962";
+        string scope = "publish_stream,manage_pages";
+
+        if (Request["code"] == null)
+        {
+            Response.Redirect(string.Format(
+                "https://graph.facebook.com/oauth/authorize?client_id={0}&redirect_uri={1}&scope={2}",
+                app_id, Request.Url.AbsoluteUri, scope));
+        }
+        else
+        {
+            Dictionary<string, string> tokens = new Dictionary<string, string>();
+
+            string url = string.Format("https://graph.facebook.com/oauth/access_token?client_id={0}&redirect_uri={1}&scope={2}&code={3}&client_secret={4}",
+                app_id, Request.Url.AbsoluteUri, scope, Request["code"].ToString(), app_secret);
+            
+
+            HttpWebRequest request = WebRequest.Create(url) as HttpWebRequest;
+
+            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+            {
+                StreamReader reader = new StreamReader(response.GetResponseStream());
+
+                string vals = reader.ReadToEnd();
+
+                foreach (string token in vals.Split('&'))
+                {
+                    //meh.aspx?token1=steve&token2=jake&...
+                    tokens.Add(token.Substring(0, token.IndexOf("=")),
+                        token.Substring(token.IndexOf("=") + 1, token.Length - token.IndexOf("=") - 1));
+                }
+            }
+
+            string access_token = tokens["access_token"];
+
+            var client = new FacebookClient(access_token);
+
+           client.Post("/me/feed", new { message = Session["FirstName"] + "likes" + drpHotels .SelectedItem .Text   });
+        }
+    }
+
+       public void BindHotels()
+    {
+        //drpHotels.Items.Insert(0,item ("Select", string .Empty) );
+        SqlConnection conn  = new SqlConnection (System .Configuration .ConfigurationManager .ConnectionStrings ["ConnectionString"].ConnectionString);
+        SqlCommand cmd = new SqlCommand();
+        cmd.CommandType = CommandType.StoredProcedure;
+
+        cmd.Connection = conn;
+        conn.Open();
+        cmd.CommandText = "sp_GetHotels";
+
+        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
+        DataSet ds = new DataSet();
+        dataAdapter.Fill(ds);
+
+        conn.Close();
+        drpHotels.DataSource = ds.Tables[0];
+        drpHotels.DataTextField = "HotelName";
+        drpHotels.DataValueField = "HotelId";
+        drpHotels.DataBind();
+
+    }
+    protected void btnReview_Click(object sender, EventArgs e)
+    {
+        //string i = drpHotels.SelectedValue;
+        //txtReview.Visible = true;
+        //txtReview.Focus();
+       Session["Fb"] = "Set" ;
+      
+       CheckAuthorization();
+      
+       
+    }
+
+   
+}

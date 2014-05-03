@@ -1,0 +1,1293 @@
+﻿*{
+	margin: 0;
+	padding: 0;
+}
+body
+{
+	margin: 0 auto;
+	padding: 0;
+	/*background-color: #f4f2ef;*/
+	color:#7e7a78;
+}
+.listbx {
+    font-weight :bold ;
+    margin-top :10px;
+    margin-bottom :10px;
+    border :1px solid black;
+}
+.divRow
+{
+	
+}
+.clear
+{
+    clear: both;
+}
+a, img
+{
+	border: none;
+	text-decoration:none;
+}
+h1, h2
+{
+	color:#545454;
+	font-family: 'liberation_sansregular' ,Sans-Serif;
+	font-size: 16px;
+	height: 25px;
+	padding: 15px 0px 10px 0px;
+	font-weight: bold;
+}
+h2
+{
+	font-size: 14px !important;
+	padding-top: 5px !important; 
+}
+.header
+{
+	width: 100%;
+	height: 100px;
+	margin: 0 auto;
+	background-color: #f4f2ef;
+}
+.header .logoContainer
+{
+	width: 900px;
+	margin: 0 auto;
+}
+.header .logoContainer img
+{
+	width: 303px;
+	height: 100px;
+}
+
+.welcom_container
+{
+	width:400px; height:30px; padding:5px 0 5px 0; float:right; position:relative;
+	color:black ;font-weight :bold; 
+	font-family: 'liberation_sansregular' ,Sans-Serif;
+	font-size: 16px;
+	font-weight: normal;
+}
+.welcom_container .divider_img
+{
+	position:absolute; margin: 2px 0px 0px 230px; padding:0; width:2px; height:16px;
+	background-image: url(../images/pipe.jpg);
+	background-repeat:no-repeat;
+}
+.welcom_container .welcom_lable
+{
+	width:215px; padding:2px 15px 2px 0px; text-align:right; float:left; position:relative;font-size :16px;font-weight :bold ;
+}
+.welcom_container .btn_logout
+{
+	/*padding:2px 10px 2px 15px; float:left; position:relative;*/
+	padding:2px 2px 2px 10px;	
+	float:left; position:relative;
+	border:0px,0px,0px,0px;
+	height:24px;width:56px;
+	display:block;
+}
+.welcom_container .btn_logout a
+{
+	display:block; color:#545454;
+}
+
+.welcom_container .btn_logout a:hover
+{
+	color:#007b8f;
+}
+
+.welcom_container .settings_optn
+{
+	float:right;
+}
+.welcom_container .settings_optn .set_btn
+{
+	width:64px; height:20px; 
+	background-image: url(../images/btn_settings_bg.jpg);
+	background-repeat:no-repeat;
+	list-style-type:none;
+	padding:2px 0px 0px 30px;
+}
+.my_options
+{
+	position:absolute;
+	display:none; /*Hide it by default */
+	margin:0 0 0 -86px;
+	width:150px;
+	padding:0;
+	list-style:none;
+	background-color:#d8d3cc;
+	z-index:10000;
+}
+.my_options li
+	{
+		float:left; width:150px;
+		padding:5px;
+		margin-top:5px; 
+		text-align:left;
+	}
+	
+.my_options li a
+	{
+		display:block;
+		background-image:url(../images/icon_gray_arrow.png);
+		background-repeat:no-repeat;
+		background-position:5% 50%;
+		text-decoration:none;
+		padding-left:25px; color:#545454;
+	}
+.my_options li a:hover
+	{
+		color:#007B8F;
+	}
+
+/**/
+.login_Section
+{
+	width:410px; height:90px; padding:5px 0 5px 0; float:right; position:relative;
+	
+	color:#545454; 
+	font-family: 'liberation_sansregular' ,Sans-Serif;
+	font-size: 13px;
+	font-weight: normal;
+}
+.login_Section .login_button 
+{
+	width: 54px; padding:2px 0px 0px 20px;
+	height:20px; color:White;
+	display:block;
+    background-color :black ;
+	/*background:url(../images/btn_login_bg_a.jpg) center top no-repeat;*/
+	border:0px,0px,0px,0px;
+	float:right;
+}
+
+/*.login_button:hover {
+   background-image: url(../images/btn_login_bg_b.jpg);
+}*/
+
+.change_btn
+{
+	padding-top:5px;
+	color:#007b8f;
+	display:block;
+    width :180px;
+}
+.change_btn:hover
+{
+	color:#545454;
+}
+
+
+.login_Section input[type="text"]
+{
+	width:162px; height:20px; border:1px solid #bdbdbd;
+}
+.login_Section input[type="password"]
+{
+	width:162px; height:20px; border:1px solid #bdbdbd;
+}
+
+.error_container
+{
+	width:100%; height:30px; background-color:#F4F2EF;
+}
+.error_container .error_box
+{
+	width:900px; height:20px; margin:0 auto; padding:0px 0px 10px 0px;
+	text-align:right;
+	font-family: 'weblysleek_ui_normalregular' ,Sans-Serif;
+	font-size: 13px; color:Red; font-weight:normal;
+}
+	.menu_container
+	{
+		width:100%; height:30px; background-color:#ebe7e1;
+	}
+	.menu_course
+	{
+		width:900px; height:30px; margin:0 auto;
+	}
+
+	.mueu_titles
+	{
+		width:334px; height:30px;
+		float:right;
+		position:relative;
+		color:#545454; 
+		font-family: 'liberation_sansregular' ,Sans-Serif;
+		font-size: 13px;
+		font-weight: Bold;
+	}
+	.menu_heading
+	{
+		width:75px; height:30px; float:left; line-height:28px;
+	}
+	.navigation_menu
+	{
+		list-style-type:none; margin:0; padding:0;
+	}
+	
+	.navigation_menu li
+	{
+		/*width:130px;*/ 
+		line-height:30px;
+		height:30px; 
+		float:right;
+		width:125px;
+		text-align:center; margin-left:2px;		
+	}
+
+	.navigation_menu li a
+	{
+		display:block;
+		/*background-image:url(../images/icon_Drp.png);
+		background-repeat:no-repeat;
+		background-position:95% 50%;*/
+		color:#545454;
+		padding:0px 15px 0px 15px;
+	}
+	.navigation_menu li a:hover
+	{
+		color:#007B8F;
+		background-color:#d8d3cc;
+	}
+	
+	.navigation_menu li:hover
+	{
+		background-color:#d8d3cc;
+	}
+	
+	.navigation_menu .nav_subMenu
+	{
+		position:absolute;
+		display:none; /* Hide it by default */
+		margin:0 0 0 -395px;
+		width:520px;
+		padding:0;
+		list-style:none;
+		background-color:#d8d3cc;
+		z-index:9000;
+	}
+	
+	.navigation_menu .nav_subMenu li
+	{
+		float:left; width:518px;
+		padding:5px 0px 5px 0px; 
+		text-align:left;
+	}
+	
+	.navigation_menu .nav_subMenu li a
+	{
+		display:block;
+		background-image:url(../images/icon_gray_arrow.png);
+		background-repeat:no-repeat;
+		background-position:2% 50%;
+		text-decoration:none;
+		padding-left:30px;
+	}
+	
+	.navigation_menu .nav_subMenu li a:hover
+	{
+		color:#007B8F;
+	}
+	
+	.menu_BG_SAP
+	{
+		width:157px; height: 85px;
+		background-image:url(../images/icon_SAP_train.png);
+		background-repeat:no-repeat;
+		position:absolute;
+		margin:-10px 0px 0px 350px;
+		
+	}
+	.menu_BG_Hadoop
+	{
+		width:88px; height: 64px;
+		background-image:url(../images/icon_hadoop_elephant.png);
+		background-repeat:no-repeat;
+		position:absolute;
+		margin:-24px 0px 0px 400px;
+		
+	}
+	
+ 
+    /*  Menu CSS--------------*/
+	.admin_nav
+	{
+		width:568px; 
+        height:20px;
+		float:left;
+        position :absolute;
+        margin-top :0px;
+        margin-left :0px;
+        
+        
+		color:#545454; 
+		font-family: 'liberation_sansregular' ,Sans-Serif;
+		font-size: 13px;
+		font-weight: bold;
+    top: 2px;
+    left: 1px;
+}
+	.admin_nav ul
+	{
+		list-style-type:none; height:57px;
+        width :562px;
+	}
+	.admin_nav ul li
+	{
+		float:left; height:34px;
+        margin-top :10px;
+        color :black;
+        position:relative; padding:7px 15px 0px 7px;
+		/*background-image:url(../images/pipe.jpg);*/
+		background-repeat:no-repeat;display:block;
+		background-position:100% 50%;
+	}
+		.admin_nav ul li a
+	{
+		display:block; color:#545454;
+	}
+	.admin_nav ul li a:hover
+	{
+		color:#007B8F;
+		/*background-color:#d8d3cc;*/
+	}
+/*___________________________Footer CSS_________________________________________*/
+.linksfooter
+{
+	width: 100%;
+	height: 150px;
+	background-color: #d8d3cc;
+	color: #545454;
+}
+.linksfooter .add_content
+{
+	margin: 0 auto;
+	width: 900px;
+	height: 150px;
+}
+.linksfooter .add_content h1
+{
+	width: 600px;
+	margin-left: 0px;
+	float: left;
+}
+
+.linksfooter .add_content p
+{
+	font-family: 'weblysleek_ui_normalregular' ,Sans-Serif;
+	font-size: 15px;
+	line-height: 22px;
+	font-weight: normal;
+	font-style: normal;
+	width: 600px;
+	height: 100px;
+	margin-left: 0px;
+	float: left;
+}
+.linksfooter .add_content .socialMediaContainer
+{
+	width: 270px;
+	height: 150px;
+	padding-left: 15px;
+	padding-right: 15px;
+	float: right;
+}
+.linksfooter .add_content .socialMediaContainer h1
+{
+	width: 270px;
+	float: left;
+}
+.linksfooter .add_content .socialMediaContainer ul li
+{
+	width: 50px;
+	height: 100px;
+	float: left;
+	list-style-type: none;
+}
+
+
+.footer
+{
+	width: 100%;
+	height: 50px;
+	background-color: #007b8f;
+}
+.footer p
+{
+	margin: 0 auto;
+	width: 900px;
+	padding: 18px 0px 10px 0px;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: normal;
+	color: White;
+}
+/*================================================================Master CSS End=============*/
+.homeBaner
+{
+	width:100%; height:300px;
+	/*background: url(../images/bnr_bg.jpg) top left repeat;*/
+}
+.homeBaner .bg_box
+{
+	width:900px; height:300px; 
+	margin:0 auto; background-color:#f4f2ef;
+}
+
+.topBaner
+{
+	width:100%; height:200px; 
+	/*background: url(../images/image_HDOOP_BG1900.jpg) top left repeat;*/
+}
+.topBaner .baner_box
+{
+	width:900px; height:200px; 
+	margin:0 auto; background-color:#f4f2ef;
+	/*background-image:url(../images/image_HDOOP.png);
+	background-repeat:no-repeat;*/
+}
+.registerBanner
+{
+	width:100%; height:200px; background-color:#2d2926;
+	background: url(../images/image_Register_bg1900.jpg) top left repeat;
+}
+.registerBanner .register_box
+{
+	width:900px; height:200px; 
+	margin:0 auto;
+	background-image:url(../images/image_Register.png);
+	background-repeat:no-repeat;
+}
+
+.mainContainer
+{
+	width:900px; margin:0 auto; position:relative;
+}
+
+.right_Pannel
+{
+	width:300px; padding-top:20px; float:right; position:relative;
+}
+.other_Courses
+{
+	width:270px;  background-color:#ebe7e1; padding:15px;
+	margin-bottom:20px;
+}
+.read_more
+{
+	width:270px; float:right;
+	background-image: url(../images/icon_blue_arrow_fliped.png);
+	background-position:66% 50%;
+	background-repeat:no-repeat;
+	font-family: 'liberation_sansregular' ,Sans-Serif;
+	font-size: 16px;
+	font-weight: normal;
+	color: #007b8f;
+	text-align:right;
+}
+
+.newsTable, .organizer_table
+{
+	width:270px;  background-color:#ebe7e1; padding:15px;
+	margin-bottom:20px;
+}
+.newsTable h2
+{
+	width:270px;
+}
+.newsTable p, .other_Courses p
+{
+	width:250px; 
+	background-image: url(../images/icon_gear_blue.png);
+	background-position:left 5px;
+	background-repeat:no-repeat;
+	font-family: 'weblysleek_ui_normalregular' ,Sans-Serif; color:#007b8f;
+	font-size: 14px; line-height: 22px; font-weight: normal;
+	padding-left:20px;
+}
+
+.other_Courses ul li
+{
+	width:250px;
+	font-family: 'weblysleek_ui_normalregular' ,Sans-Serif;
+	font-size: 13px; line-height: 22px; font-weight: normal;
+	padding-left:20px;
+	list-style-type:none;
+}
+
+
+.newsTable ul li
+{
+	width:250px;
+	font-family: 'weblysleek_ui_normalregular' ,Sans-Serif;
+	font-size: 13px; line-height: 22px; font-weight: normal;
+	padding-left:20px;
+	list-style-type:none;
+}
+.organizer_table p
+{
+	font-family: 'weblysleek_ui_normalregular',Sans-Serif;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 22px;
+}
+.discription
+{
+	margin-top:10px;
+}
+
+
+.class_reg
+{
+	width:78px; float:right; position:relative;
+	background-image: url(../images/icon_blue_arrow_fliped.png);
+	background-position:10px 50%;
+	background-repeat:no-repeat;
+	font-family: 'liberation_sansregular' ,Sans-Serif;
+	font-size: 13px;
+	font-weight: normal;
+	color: #007b8f;
+	text-align:right;
+}
+.cost_Tag
+{
+    font-family: 'weblysleek_ui_normalregular',Sans-Serif;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 22px;
+    padding-left: 20px;
+    width: 250px; margin-top:10px;
+}
+/*.newsTable .mySigenUp
+{
+	height:25px; margin-top:5px; padding-left:178px;
+	font-family: 'liberation_sansregular' ,Sans-Serif;
+	font-size: 18px;
+	font-weight: normal;
+	color: #007b8f;
+}
+.newsTable .mySigenUp a
+{
+	color: #007b8f; display:block;
+}*/
+
+
+
+.left_Pannel
+{
+	width:580px; padding:0px 20px 0px 0px; float:left; min-height:500px; position:relative;
+}
+.left_Pannel h1
+{
+	width:600px; padding-bottom:5px;
+}
+.left_Pannel .courses_topics li
+{
+	list-style-type:none; padding:6px 0px 6px 20px; margin-left:20px;
+	background-image: url(../images/icon_gray_arrow.png);
+	background-position:left 11px;
+	background-repeat:no-repeat;
+}
+.hadoop_info
+{
+	width:580px;
+	background-image: url(../images/hat.png);
+	background-position:100% 0;
+	background-repeat:no-repeat;
+}
+
+.hadoop_info p
+{
+	width:430px;
+}
+.left_Pannel p, .left_Pannel .usain_courses li, .left_Pannel .courses_Link li, .left_Pannel .courses_topics li
+{
+	font-family: 'weblysleek_ui_normalregular' ,Sans-Serif;
+	font-size: 13px; line-height: 22px; font-weight: normal;
+}
+
+.courses_Link li
+{
+	list-style-type:none; height:32px; width:400px;
+	background-image: url(../images/icon_gear.png);
+	background-position:5% 50%;
+	background-repeat:no-repeat;
+	background-color:#ebe7e1;
+	margin-bottom:2px;
+	
+}
+
+.courses_container
+{
+	height:25px; width:350px;
+	padding:5px 0px 0px 50px;
+}
+.course_register
+{
+	width:135px; height:32px; padding-left:15px; float:right; position:relative;
+	background-image: url(../images/icon_blue_arrow_fliped.png);
+	background-position:left 5px;
+	background-repeat:no-repeat;
+	font-family: 'liberation_sansregular' ,Sans-Serif;
+	font-size: 13px;
+	font-weight: normal;
+	color: #007b8f;
+}
+
+.usain_courses a, .course_register a, .class_reg a, .read_more a, .other_Courses p a, .newsTable a, .organizer_table a
+{
+	display:block;
+	color: #007b8f
+}
+.course_register a:hover, .usain_courses a:hover, .class_reg a:hover, .read_more a:hover
+{
+	color: #545454;
+}
+
+.usain_courses li
+{
+	list-style-type:none; height:32px; padding:5px 0px 0px 60px;
+	background-image: url(../images/icon_gear.png);
+	background-position:5% 45%;
+	background-repeat:no-repeat;
+}
+
+.usain_courses li img
+{
+	padding-left:10px;
+}
+
+.download_btn
+{
+	 margin-top:20px;
+}
+
+
+.left_Pannel .partners li
+{
+	width:150px; height:100px; list-style-type:none; float:left; margin:10px 0px 0px 20px; 
+}
+
+.price_box
+{
+	font-family: 'liberation_sansregular' ,Sans-Serif;
+	font-weight: normal;
+	height:33px; width:580px; margin: 10px 0px 10px 0px;
+	
+}
+.price_box .course_prise
+{
+	color: #007b8f;
+	font-size: 16px; 
+	height:27px; width:182px; float:left; position:relative; padding:6px 0px 0px 20px;
+	background: url(../images/priceTag.png) top left no-repeat;
+}
+
+.login_table_register
+{
+	width:900px; height:120px; background-color:#ebe7e1; padding:15px;
+}
+.userHolder
+{
+	width:240px; height:30px; margin:25px 0px 0px 0px; padding-left:25px;
+	color:#545454; 
+	font-family: 'liberation_sansregular' ,Sans-Serif;
+	font-size: 16px;
+	font-weight: normal;
+	background-image: url(../images/icon_user.jpg);
+	background-position:left 1px;
+	background-repeat:no-repeat;
+}
+.passwordHolder
+{
+	width:240px; height:30px; margin:-30px 0px 0px 320px; padding-left:25px;
+	color:#545454; 
+	font-family: 'liberation_sansregular' ,Sans-Serif;
+	font-size: 16px;
+	font-weight: normal;
+	background-image: url(../images/icon_password.jpg);
+	background-position:left 1px;
+	float:left ;
+	background-repeat:no-repeat;
+}
+
+.login_table_register input[type="text"]
+{
+	width:150px; height:20px; border:1px solid #bdbdbd; float:right;
+}
+
+.login_table_register .myLogin
+{
+	height:30px; margin-top:-30px; padding-left:15px;margin-left :620px;
+	font-family: 'liberation_sansregular' ,Sans-Serif;
+	font-size: 18px;
+	font-weight: normal;
+	color: #007b8f;
+	float:left;
+}
+.login_table_register .myLogin a
+{
+	color: #007b8f; display:block;
+}
+.login_table_register p
+{
+	margin-top:15px;
+	font-family: 'liberation_sansregular' ,Sans-Serif;
+	font-size: 14px;
+	font-weight: normal;
+}
+.login_table_register a
+{
+	font-family: 'liberation_sansregular' ,Sans-Serif;
+	font-size: 16px;
+	font-weight: normal;
+	color: #007b8f;
+	color: #007b8f; display:block;
+}
+#tb_register tr
+{
+	height:30px;
+	
+}
+#tb_register td
+{
+	margin : 0 ;
+	padding-top :5px;
+	padding-bottom :5px;
+}
+.left_Pannel_register
+{
+	width:900px;  float:left;  position:relative;margin-bottom :20px;
+}
+.txt
+{
+	height:26px;
+	width :250px;
+	
+}
+
+/* register course page=========*/
+
+.title_icon
+{
+	width:580px; 
+	/*background-image:url(../images/icon_hadoop_elephant.png);*/
+	background-repeat:no-repeat;
+	background-position:2% 70%;
+	margin-top: 0px;
+}
+.title_icon h1
+{
+	padding-left:50px; width:400px;height:15px;
+}
+.title_icon p
+{
+	padding-left:50px; width:400px;
+}
+.data_store
+{
+	width:580px;
+	font-family: 'weblysleek_ui_normalregular' ,Sans-Serif;
+	font-size: 16px; line-height: 22px; font-weight: normal;
+}
+.data_store ul 
+{
+	list-style-type:none;  width:580px;
+}
+.data_store .colum_titles
+{
+	width:135px;
+	color:#007b8f;
+	padding-top:15px;float:left; position:relative;
+}
+.data_store .column_disc
+{
+	width:444px;
+	padding-top:15px;float:left; position:relative;
+}
+.payment_row
+{
+	width:580px; height:50px; float:left; position:relative;
+	background-color:#ebe7e1;  margin-top:25px;
+}
+.payment_row .payNow
+{
+	width:120px; height:35px; 
+	margin: 7px 0 0 15px; float:left; position:relative;
+}
+.payment_row .getWays_img
+{
+	width:180px; height:50px; float:right; position:relative;
+	background-image: url(../images/icon_visa_master_paypal.png);
+	background-position:top 50%;
+	background-repeat:no-repeat;
+}
+
+.syllabus h3
+{
+	font-family: 'liberation_sansregular' ,Sans-Serif; color:#545454;
+	font-size: 16px; font-weight: normal; padding:10px 0 10px 0;
+}
+.syllabus p
+{
+	padding-left:20px; width:560px;
+}
+.anchor_top
+{
+	color:#007b8f; width:576px; height:20px;
+	font-family: 'weblysleek_ui_normalregular' ,Sans-Serif;
+	font-size: 13px; line-height: 22px; font-weight: bold;
+}
+.anchor_top .anchor_Box
+{
+	width:110px; float:right; text-align:right;
+}
+.anchor_top .anchor_Box a
+{
+	color:#007b8f; display:block;
+}
+
+p spam
+{
+	color:#007b8f;
+}
+/* style for tab ui_____________________________________*/
+.email_Div
+{
+	position:absolute; width:540px; padding:5px; margin:5px 0px 0px 5px;
+	font-family: 'liberation_sansregular' ,Sans-Serif; color:#007b8f;
+	font-size: 18px;
+	font-weight: normal;
+}
+.my_Tab_ui
+{
+	width:580px; margin-top:20px; margin-bottom:10px;
+}
+.tabs_nav_head li, .head_td
+{
+	font-family: 'liberation_sansregular' ,Sans-Serif;
+	font-size: 18px;
+	font-weight: normal;
+	color: #545454;
+}
+.head_td
+{
+	font-size: 16px;
+}
+.discription_td
+{
+	font-family: 'weblysleek_ui_normalregular' ,Sans-Serif;
+	font-size: 14px; line-height: 22px; font-weight:normal;
+}
+.update_link
+{
+	width:520px;
+	margin-top:10px;
+}
+.history_content
+{
+	font-family: 'liberation_sansregular' ,Sans-Serif;
+	font-size: 16px;
+	font-weight: normal;
+	color: #545454;
+}
+
+/* my downloads style ______________*/
+
+.downloads_div
+{
+	width:580px; margin:5px 0 5px 0px;
+}
+.downloads_div ul li
+{
+	list-style-type:none; width:500px; padding:10px 5px 10px 60px; margin-top:10px;
+}
+.downloads_div ul li img
+{
+	position:absolute; margin:-15px 0 0 -40px;
+}
+.downloads_div ul li a
+{
+	font-family: 'weblysleek_ui_normalregular' ,Sans-Serif;
+	font-size: 15px; line-height: 0px; font-weight:normal;
+	color: #545454; display: block;
+}
+.downloads_div ul li a:hover
+{
+	color: #007b8f;
+}
+.displayNone 
+{ 
+	display: none; 
+}
+.clsEdit
+{
+	background-image : url(../images/btn_edit.png);
+	height :35px;
+	width :80px;
+	background-repeat :no-repeat ;
+	border :none;
+}
+
+.clsPayBtn
+{
+	background-image : url(../images/BtnWithoutText.png);
+	height :35px;
+	width :120px;
+	background-repeat :no-repeat ;
+	border :none;
+	font-family: 'liberation_sansregular' ,Sans-Serif;
+	font-size: 16px;
+	color:White;
+	cursor:pointer;
+}
+ /* Registration Information form____________________________*/
+
+.reg_div
+{
+	width:860px; padding:10px 20px 20px 20px; background-color:#f4f2ef;
+	margin:0;min-height :400px;
+}
+.reg_form_section
+{
+	width:860px;
+}
+
+.reg_div h3
+{
+	color: #007b8f;
+	font-family: 'liberation_sansregular' ,Sans-Serif;
+	font-size: 18px;
+	font-weight: normal; margin-bottom:10px; margin-top:10px;
+}
+.control_group
+{
+	clear:both;
+	font-family: 'weblysleek_ui_normalregular' ,Sans-Serif;
+	font-size: 15px; line-height: 0px; font-weight:normal;
+	color: #545454; display: table;
+	
+}
+.control_lable
+{
+	float: left;
+    padding-top: 5px;
+    text-align: left;
+    width: 140px;
+    display: block;
+    margin-bottom: 15px; line-height:18px;
+}
+.controls_info
+{
+	margin-left: 160px; width:680px;
+}
+.controls_info input[type="text"]
+{
+	width:165px; height:20px; border:1px solid #bdbdbd;
+	background-color: #FFFFFF;
+	padding:2px 2px; vertical-align:middle;
+}
+.controls_info input[type="password"]
+{
+	width:165px; height:20px; border:1px solid #bdbdbd;
+	background-color: #FFFFFF;
+	padding:2px 2px; vertical-align:middle;
+}
+
+.controls_info_label
+{
+	margin-left: 160px; width:680px;
+	margin-top:15px;
+}
+
+.costLabel_class
+{
+	width:165px; height:20px; 
+	padding:0px 2px; vertical-align:bottom;
+	float:left ;
+	position:relative;
+	
+}
+
+.controls_info select
+{
+	display: inline-block;
+	border:1px solid #bdbdbd;
+    margin-bottom: 0;
+    vertical-align: middle; width: 70px; height: 26px;
+    line-height: 30px;
+}
+.cta_box
+{
+	width:860px; margin:20px 0px 10px 0px;
+	background-image: url(../images/visa_master_paypal.png);
+	background-repeat:no-repeat;
+	background-position:left 50%;
+}
+.cta_box .pay_btn
+{
+	background-image: url(../images/btn_payNow.png);
+	background-repeat:no-repeat;
+	width:120px; height:35px; margin-left:210px;
+}
+ /* Change password form ______________*/
+
+.infoBox_container
+{
+	padding:5px 10px 30px 0px; font-family: 'weblysleek_ui_normalregular' ,Sans-Serif;
+	font-size: 13px; line-height: 0px; font-weight:normal;
+	color: #545454; 
+}
+
+
+.cta_changePass_box
+{
+	width:860px; margin:20px 0px 10px 0px;
+}
+.cta_changePass_box .changePass
+{
+	background-image: url(../images/btn_changePass.png);
+	background-repeat:no-repeat;
+	width:170px; height:35px; 
+}
+/* User msg__________*/
+.user_msgBox
+{
+	margin:0 auto;
+	width:500px; border:1px solid #bdbdbd;
+	padding: 50px 50px 50px 50px;
+	font-family: 'weblysleek_ui_normalregular' ,Sans-Serif;
+	font-size: 15px; font-weight:normal;
+	color: #545454;
+}
+.user_msgBox a
+{
+	color:#007b8f; font-weight:normal;
+}
+
+/* User Error__________*/
+.user_errorBox
+{
+	margin:0 auto;
+	width:450px; border:1px solid #bdbdbd;
+	padding: 50px 50px 50px 100px;
+	font-family: 'weblysleek_ui_normalregular' ,Sans-Serif;
+	font-size: 15px; font-weight:normal;
+	color: #545454;
+	background-image: url(../images/error_bg.png);
+	background-repeat:no-repeat;
+	background-position:30px 55px;
+}
+.user_errorBox a
+{
+	color:#007b8f; font-weight:normal;
+}
+ .clsEdit
+{
+	background-image : url(../images/btn_edit.png);
+	height :35px;
+	width :80px;
+	background-repeat :no-repeat ;
+	border :none;
+	cursor:pointer;
+}
+/*Manage Course style________________________________*/
+
+.manageCorsBox
+{
+	width:828px; border:1px solid #aea79e;
+	padding:0px 15px 15px 15px;
+}
+
+.ctrl-box
+{
+	font-family: 'weblysleek_ui_normalregular' ,Sans-Serif;
+	font-size: 13px; line-height: 0px; font-weight:normal;
+	color: #545454; display: table; 
+}
+.box-lable
+{
+	float: left;
+    padding-top: 5px;
+    text-align: left;
+    width: 120px;
+    display: block;
+    margin-bottom: 15px; line-height:18px;
+}
+.box-info
+{
+	margin-left: 130px; width:260px;
+}
+.box-info input[type="text"]
+{
+	width:250px; height:20px; border:1px solid #bdbdbd;
+	background-color: #FFFFFF;
+	padding:2px 2px; vertical-align:middle;
+}
+	.discription-box
+	{
+		float:left;
+		font-family: 'weblysleek_ui_normalregular' ,Sans-Serif;
+		font-size: 13px; line-height: 0px; font-weight:normal;
+		color: #545454; display: table; 
+	}
+	.discription-lable
+	{
+		float: left;
+		padding-top: 5px;
+		text-align: left;
+		width: 410px;
+		display: block;
+		margin-bottom: 15px; line-height:18px;
+	}
+	.discription-info
+	{
+		margin-left: 0px; width:410px;
+	}
+	
+	.discription-info input[type="text"]
+	{
+		width:400px; height:135px; border:1px solid #bdbdbd;
+		background-color: #FFFFFF;
+		padding:2px 2px; vertical-align:middle;
+	}
+	
+.cta_ManageBox
+{
+	width:828px; margin:20px 0px 10px 0px; height:35px;
+}
+.cta_ManageBox .btnBox
+{
+	float:left; position:relative; color:White;
+	width:80px; height:35px; margin-right:20px;
+}
+
+.courseInfoContainer
+{
+	width:860px; clear:both;
+}
+.hdrGrid
+{
+	height :26px;
+	padding :2px 0px 2px 0px;
+	background-color :#545454;
+	font-family :'liberation_sansregular' ,Sans-Serif;
+	font-weight :normal ;
+	font-size :15px;
+	color:White ;
+	text-align :center ;
+}
+.grdCourse
+{
+	width :860px;
+	margin-top :10px;
+	font-family :'weblysleek_ui_normalregular' ,Sans-Serif;
+	font-size :13px;
+	border:0px solid #d8d3cc;
+	background-color :White ;
+	display:table ;
+    text-align :center ;
+}
+.rowGrid
+{
+		height:30px;
+		
+}
+.cs
+{
+	padding-right :5px;
+	padding-left :5px;
+	
+}
+
+
+/* Manage Batches box____________________________________*/
+
+.manageBatchesBox
+{
+	width:828px; border:1px solid #aea79e;
+	padding:0px 15px 15px 15px;
+}
+.drpCategory
+{
+	width:255px; height:26px; border:1px solid #bdbdbd;
+	background-color: #FFFFFF;
+	padding:2px 2px; vertical-align:middle;
+}
+.cuppleMenu
+{
+	width:828px; height:38px;
+}
+.ctrl_box_x1
+{
+	font-family: 'weblysleek_ui_normalregular' ,Sans-Serif;
+	font-size: 13px; line-height: 0px; font-weight:normal;
+	color: #545454; display: table; float:left; position:relative;
+}
+.box_lable_x1
+{
+	float: left;
+    padding-top: 5px;
+    text-align: left;
+    width: 120px;
+    display: block;
+    margin-bottom: 15px; line-height:18px;
+}
+.box_info_1
+{
+	margin-left: 130px; width:260px;
+}
+.box_info_1 input[type="text"]
+{
+	width:250px; height:20px; border:1px solid #bdbdbd;
+	background-color: #FFFFFF;
+	padding:2px 2px; vertical-align:middle;
+}
+.box_info_1 input[type="file"]
+{
+	width:250px; height:26px; border:1px solid #bdbdbd;
+	background-color: #FFFFFF;
+}
+
+.info_I
+{
+	width:20px; height:26px; background-color:Red; float:left; position:relative;
+}
+.text-label {
+    color: #cdcdcd;
+    font-weight: bold;
+}
+/*Admin Student CSS __________________________*/
+
+.std_info
+{
+	width:500px; display:block;
+	margin:14px 0px 0px 0px;
+}
+
+
+/*Constuction________________*/
+.constuctionDiv
+{
+	margin:0 auto;
+	width:750px; height:270px;
+	font-family: 'weblysleek_ui_normalregular' ,Sans-Serif;
+	font-size: 13px; font-weight:normal;
+	color: #545454;
+	background-image: url(../images/construction.png);
+	background-repeat:no-repeat;
+	
+}
+
+.SiteLink
+{
+	position:absolute;
+	margin:165px 0 0 215px;
+}
+.SiteLink a
+{
+	color:#007b8f; font-weight:normal;
+}
