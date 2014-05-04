@@ -1,5 +1,5 @@
 ﻿<%@ Master Language="C#" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
-<%@import Namespace="Google.API.Search" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -41,9 +41,11 @@
             <div class="hdrContainer">
                 <div class="hdr_intra">
                     <div class="hdr_intraportal">
-                        <asp:ImageButton ImageUrl="~/images/logo.jpg" ID="txtlogo_img" runat="server" Width="300" Height="100" OnClick="txtlogo_img_Click" />
+                        <asp:ImageButton ImageUrl="images/logo.jpg" ID="txtlogo_img" runat="server" Width="300" Height="100" OnClick="txtlogo_img_Click" />
+                        <!--<iframe
+                            src="<%=this.RootUrl %>Search.html"-->
                         <iframe
-                            src="<%=this.RootUrl %>Search.html"
+                            src="Search.html"
                             class="SearchContainer"
                             frameborder="0"
                             scrolling="no" style="float: right; height: 33px; position: absolute; top: 11px; left: 900px;">
@@ -55,14 +57,14 @@
                             <td width="10" height="25">&nbsp;
                             </td>
                             <td width="54" height="25" >
-                                <asp:ImageButton ID="lnk_login"  runat="server" ValidationGroup="RegisterGroup" ImageUrl ="~/images/Log in.png"  OnClick="lnk_login_Click" Width ="150px" Height ="20px" ></asp:ImageButton>
+                                <asp:ImageButton ID="lnk_login"  runat="server" ValidationGroup="RegisterGroup" ImageUrl ="images/Log in.png"  OnClick="lnk_login_Click" Width ="150px" Height ="20px" ></asp:ImageButton>
                             </td>
                         </tr>
                         <tr>
                             <td width="10" height="25">&nbsp;
                             </td>
                             <td>
-                                <asp:ImageButton ID="lnk_Register"  BackColor="white" ForeColor="Red" runat="server" ImageUrl="~/images/Sign up.png" Width ="150px" Height ="20px" ValidationGroup="RegisterGroup" OnClick="lnk_Register_Click"></asp:ImageButton>
+                                <asp:ImageButton ID="lnk_Register"  BackColor="white" ForeColor="Red" runat="server" ImageUrl="images/Sign up.png" Width ="150px" Height ="20px" ValidationGroup="RegisterGroup" OnClick="lnk_Register_Click"></asp:ImageButton>
                             </td>
                         </tr>
                         <tr>

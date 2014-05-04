@@ -10,11 +10,11 @@
             <div class="loginbox" style="width: 960px; height: 350px; margin-top: 60px">
                 <%-- <asp:Label ID="holder" runat ="server" ></asp:Label>--%>
                 <div>
-                    <h1> Ruby Chinese 
+                    <h1> Wings Chinese 
                     </h1>
-                    <asp:Image ID="Image1" CssClass="loginbox1" runat="server" ImageUrl="~/images/Indian5.jpg" Width="300" Height="180" />
+                    <asp:Image ID="Image1" CssClass="loginbox1" runat="server" ImageUrl="images/chineseFood.jpg" Width="300" Height="180" />
                     <div style ="float:left;position :relative;width :550px;font-size :15px;font-family: 'RobotoLight' ,Sans-Serif;color :black  ;height :200px;margin-left :20px;">
-                         Ruby Chinese's is a great restaurant for friends and family.
+                         Wings Chinese's is one of the famous restaurant chain all over the USA.
                          Our staff are friendly and courteous for whatever the occasion.
                          Be it a lunch break, a dinner with friends or even a quick take out meal! We're here. 
                         <br />

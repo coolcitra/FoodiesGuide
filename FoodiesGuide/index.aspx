@@ -7,7 +7,7 @@
 
     <div class ="wrapper" >
         <div class ="container" >
-            <asp:ImageButton  ID="img1" runat ="server" ImageUrl ="~/images/home.jpg" Width ="1000px" Height ="450px" />    
+            <asp:ImageButton  ID="img1" runat ="server" ImageUrl ="images/home.jpg" Width ="1000px" Height ="450px" />    
                         
         </div>
         

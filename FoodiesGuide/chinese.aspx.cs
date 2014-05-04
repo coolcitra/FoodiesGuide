@@ -36,13 +36,13 @@ public partial class chinese : System.Web.UI.Page
     }
     public void CalendarBind()
     {
-        CalendarService service = new CalendarService("Your app name");
-        service.setUserCredentials("fooddelicioussjsu@gmail.com", "4085120350");
+        CalendarService service = new CalendarService("FoodiesGuide");
+        service.setUserCredentials("foodiessjsu@gmail.com", "foodiessjsu123");
 
 
         FeedQuery query = new FeedQuery();
         query.Uri = new
-                    Uri("http://www.google.com/calendar/feeds/fooddelicioussjsu@gmail.com/private/full");
+                    Uri("http://www.google.com/calendar/feeds/foodiessjsu@gmail.com/private/full");
         AtomFeed calFeed = service.Query(query);
         foreach (AtomEntry entry in calFeed.Entries)
         {

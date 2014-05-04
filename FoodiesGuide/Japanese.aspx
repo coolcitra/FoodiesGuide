@@ -10,12 +10,12 @@
             <div class="loginbox" style="width: 960px; height: 350px; margin-top: 60px">
                 <%-- <asp:Label ID="holder" runat ="server" ></asp:Label>--%>
                 <div>
-                    <h1>Kansai
+                    <h1>Kaita
                     </h1>
                     
-                    <asp:Image ID="Image1" CssClass="loginbox1" runat="server" ImageUrl="~/images/Indian5.jpg" Width="300" Height="180" />
+                    <asp:Image ID="Image1" CssClass="loginbox1" runat="server" ImageUrl="images/japaneseFood.jpg" Width="300" Height="180" />
                     <div style ="float:left;position :relative;width :550px;font-size :15px;font-family: 'RobotoLight' ,Sans-Serif;color :black  ;height :200px;margin-left :20px;">
-                        Welcome to Kansai – San Jose!  We offer high quality Sushi and Sashimi with one of the best All-You-Can-Eat specials!  Please feel free to take a look around at our menu and what we have to offer. 
+                        Welcome to Kaita – San Jose!  We offer high quality Sushi and Sashimi with one of the best All-You-Can-Eat specials!  Please feel free to take a look around at our menu and what we have to offer. 
                          We serve high quality Sushi such as our famous “Mango Crunch” and “Mamasitta” rolls.
                         <br />
                         <br />

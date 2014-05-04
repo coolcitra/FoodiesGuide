@@ -21,7 +21,7 @@ Shashank<br />
 Surbhi
                     </div>
                 <div style ="float :left;position :absolute   ">
-                <asp:Image ID="img1" runat ="server" ImageUrl ="~/images/logo.jpg" Height ="300px" Width ="400px"  />
+                <asp:Image ID="img1" runat ="server" ImageUrl ="images/logo.jpg" Height ="300px" Width ="400px"  />
                 </div>
             </div>
         </div>

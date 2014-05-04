@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login1.aspx.cs" MasterPageFile="MasterPage.master" Inherits="Login1" %>
-<%@import Namespace="Google.API.Search" %>
+
 <asp:Content ID="content1" runat="server" ContentPlaceHolderID="head">
     <title>Login</title>
 </asp:Content>
