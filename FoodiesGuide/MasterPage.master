@@ -105,13 +105,13 @@
                                 <a href="AboutUs.aspx" style="width: 85px;font-size :22px;color :maroon; font-family:'Brush Script MT'">About Us</a>
                             </li>
                             <li style="background-image: none;margin-left: 10px">
-                                <a href="Restaurants.aspx" style="width: 40px;font-size :22px;color :maroon; font-family:'Brush Script MT' ">Restaurants</a>
+                                <a href="Restaurants.aspx" style="width: 50px;font-size :22px;color :maroon; font-family:'Brush Script MT' ">Restaurants</a>
                             </li>
                             <li style="background-image: none;margin-left: 10px">
-                                <a id="aPromo" runat="server" href="#" style="width: 165px;font-size :22px;color :maroon; font-family:'Brush Script MT'" >Offers</a>
+                                <a id="aPromo" runat="server" href="#" style="width: 40px;font-size :22px;color :maroon; font-family:'Brush Script MT'" >Offers</a>
                             </li>
-                            <li style="background-image: none; margin-top: 0px;">
-                                <a id="aReview" runat="server" href="#" style="width: 60px;font-size :22px;color :maroon; font-family:'Brush Script MT' ">Review</a>
+                            <li style="background-image: none; margin-top: 10px;">
+                                <a id="aReservation" runat="server" href="#" style="width: 60px;font-size :22px;color :maroon; font-family:'Brush Script MT' ">Reservations</a>
                             </li>
                         </ul>
                     </div>

@@ -36,8 +36,8 @@ public partial class MasterPage : System.Web.UI.MasterPage
             if (Session["FirstName"] == null)
             {
                 aPromo.Visible = false ;
-                aReview.Visible = false ;
-                aReview.HRef = "";
+                aReservation.Visible = false;
+                aReservation.HRef = "";
                 aPromo.HRef = "";
                 tbl1.Visible = true;
                 welcome_container.Visible = false;
@@ -48,8 +48,8 @@ public partial class MasterPage : System.Web.UI.MasterPage
                 tbl1.Visible = false;
                 lblWelcome.Text = "Welcome " + Session["FirstName"] + "!";
                 aPromo.Visible = true;
-                aReview.Visible = true;
-               // aReview.HRef = "Review.aspx";
+                aReservation.Visible = true;
+                aReservation.HRef = "Reservation.aspx";
                string ss= Session ["Result"].ToString ();
                 if(ss == "0")
                 {
@@ -65,8 +65,8 @@ public partial class MasterPage : System.Web.UI.MasterPage
         else if (Session["FirstName"] == null)
         {
            aPromo.Visible = false;
-           aReview.Visible = false;
-            aReview.HRef = "";
+           aReservation.Visible = false;
+           aReservation.HRef = "";
             aPromo.HRef = "";
            tbl1.Visible = true;
             welcome_container.Visible = false;
@@ -77,8 +77,8 @@ public partial class MasterPage : System.Web.UI.MasterPage
             lblWelcome.Text = "Welcome " + Session["FirstName"] + "!";
             tbl1.Visible = false;
             aPromo.Visible = true;
-            aReview.Visible = true;
-           // aReview.HRef = "Review.aspx";
+            aReservation.Visible = true;
+            aReservation.HRef = "Reservations.aspx";
             string ss = Session["Result"].ToString();
              if(ss == "0")
                 {
