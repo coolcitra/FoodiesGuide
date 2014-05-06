@@ -66,17 +66,19 @@ public partial class Login : System.Web.UI.Page
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "insert into RegisterUser ([userName],[email], [password], [flag], [phone]) values (?,?,?,?,?);";
+
+            cmd.CommandText = "INSERT INTO dbo.RegisterUser ([userName],[email], [password], [flag]) VALUES (@userName, @email, @password, @flag);";
 
             cmd.Parameters.AddWithValue("@userName", txt1.Text);
             cmd.Parameters.AddWithValue("@email", TextBox1.Text);
             cmd.Parameters.AddWithValue("@password", txt2.Text);
-            cmd.Parameters.AddWithValue("@flag", Convert.ToInt32(1));
-            cmd.Parameters.AddWithValue("@phone", TextBox2.Text);
+            cmd.Parameters.AddWithValue("@flag", 1);
+//            cmd.Parameters.AddWithValue("@phone", TextBox2.Text);
             cmd.Connection = sqlConn;
             sqlConn.Open();
             cmd.ExecuteNonQuery();
             System.Diagnostics.Debug.WriteLine("Inserted..!");
+            Response.Redirect("Login1.aspx");
         }
         catch (SqlException sql)
         {

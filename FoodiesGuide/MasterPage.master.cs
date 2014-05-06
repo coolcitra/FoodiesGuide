@@ -131,7 +131,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
     protected void lnk_Register_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Login.aspx");
+        Response.Redirect("Register.aspx");
     }
     protected void BtnLogout_Click(object sender, EventArgs e)
     {

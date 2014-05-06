@@ -26,41 +26,58 @@ using System.Data.Sql;
 
 public partial class Promotions : System.Web.UI.Page
 {
-    DataSet ds = new DataSet();
+
     int PromotionId = 0;
     protected void Page_Load(object sender, EventArgs e)
     {
-              
-            BindGrid();      
-       
+
+        BindGrid();
+
     }
     public void BindGrid()
     {
-        
+        DataSet ds = new DataSet();
         grd.DataSource = null;
         ds.Clear();
 
+        // cmd.CommandType = CommandType.StoredProcedure;
+        //SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        //cmd.CommandText = "dbo.sp_GetPromotions";
+
         SqlCommand cmd = new SqlCommand();
-        cmd.CommandType = CommandType.StoredProcedure;
+        SqlConnection sqlconn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["TestDBConnection"].ConnectionString);
 
-        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-                
-        cmd.CommandText = "dbo.sp_GetPromotions";
+        try
+        {
+            cmd.Connection = sqlconn;
+            cmd.Connection.Open();
+            cmd.CommandText = "SELECT * FROM dbo.Promotion";
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
 
-        cmd.Connection = conn;
-        cmd.Connection.Open();
-        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(ds);
+            grd.DataSource = ds.Tables[0];
+            grd.DataBind();
 
-        adapter.Fill(ds);
-        cmd.Connection.Close();
+            grd.HeaderRow.Cells[1].Text = "Promotion Event";
+            grd.HeaderRow.Cells[2].Text = "Description";
+            grd.HeaderRow.Cells[3].Text = "Restaurant";
 
-        grd.DataSource = ds.Tables[0];
-        grd.DataBind();
-
-        grd.HeaderRow.Cells[2].Text = "Promotion Event";
-        grd.HeaderRow.Cells[3].Text = "Description";
-        grd.HeaderRow.Cells[4].Text = "Restaurant";
-       
+            //cmd.Connection.Close();
+        }
+        catch (SqlException sql)
+        {
+            System.Diagnostics.Debug.WriteLine("sqlException");
+            System.Diagnostics.Debug.WriteLine(sql.StackTrace);
+        }
+        catch (Exception exc)
+        {
+            System.Diagnostics.Debug.WriteLine("Exception in execute query");
+            System.Diagnostics.Debug.WriteLine(exc.StackTrace);
+        }
+        finally
+        {
+            sqlconn.Close();
+        }
     }
 
     protected void grd_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -71,54 +88,64 @@ public partial class Promotions : System.Web.UI.Page
             e.Row.Cells[0].Style["text-align"] = "center";
             //e.Row.Cells[1].Style["text-align"] = "center";
             //e.Row.Cells[2].Style["text-align"] = "center";
-            e.Row.Cells[4].Style["text-align"] = "center";
+            e.Row.Cells[1].Style["text-align"] = "center";
             e.Row.Cells[2].Style["text-align"] = "center";
             e.Row.Cells[3].Style["text-align"] = "center";
-           
+
         }
     }
     protected void grd_RowDeleting(object sender, GridViewDeleteEventArgs e)
     {
-            DataTable dt = new DataTable();
-            dt  = (DataTable  )grd.DataSource;
-            PromotionId = Convert.ToInt32(dt.Rows[e.RowIndex]["Id"]);
-            Session["PromotionId"] = PromotionId;
+        DataTable dt = new DataTable();
+        dt = (DataTable)grd.DataSource;
+        PromotionId = Convert.ToInt32(dt.Rows[e.RowIndex]["promotionId"]);
+        Session["PromotionId"] = PromotionId;
 
-         SqlCommand cmd = new SqlCommand();
-         try
-         {
+        SqlCommand cmd = new SqlCommand();
+        SqlConnection sqlconn = new SqlConnection(ConfigurationManager.ConnectionStrings["TestDBConnection"].ConnectionString);
+        try
+        {
+            //cmd.CommandType = CommandType.StoredProcedure;
 
-             cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "DELETE FROM dbo.Promotion WHERE promotionId = " + PromotionId + ";";
 
-             SqlConnection sqlconn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            //System.Data.SqlClient.SqlParameter[] sqlparams = new System.Data.SqlClient.SqlParameter[1];
 
-             System.Data.SqlClient.SqlParameter[] sqlparams = new System.Data.SqlClient.SqlParameter[1];
+            //sqlparams[0] = new System.Data.SqlClient.SqlParameter("@PromotionId", SqlDbType.Int);
+            //sqlparams[0].Value = Session["PromotionId"];
+            //cmd.Parameters.Add(sqlparams[0]);
 
-             sqlparams[0] = new System.Data.SqlClient.SqlParameter("@PromotionId", SqlDbType.Int);
-             sqlparams[0].Value = Session["PromotionId"];
-             cmd.Parameters.Add(sqlparams[0]);
+            //cmd.CommandText = "sp_DelPromotions";
 
-             cmd.CommandText = "sp_DelPromotions";
+            cmd.Connection = sqlconn;
+            cmd.Connection.Open();
+            cmd.ExecuteNonQuery();
+            cmd.Connection.Close();
 
-             cmd.Connection = sqlconn;
-             cmd.Connection.Open();
-             cmd.ExecuteNonQuery();
-             cmd.Connection.Close();
-
-             BindGrid();
-             Session["PromotionId"] = "";
-         }
-         catch
-         {
-         }
-               
+            BindGrid();
+            Session["PromotionId"] = "";
+        }
+        catch (SqlException sql)
+        {
+            System.Diagnostics.Debug.WriteLine("sqlException");
+            System.Diagnostics.Debug.WriteLine(sql.StackTrace);
+        }
+        catch (Exception exc)
+        {
+            System.Diagnostics.Debug.WriteLine("Exception in execute query");
+            System.Diagnostics.Debug.WriteLine(exc.StackTrace);
+        }
+        finally
+        {
+            sqlconn.Close();
+        }
     }
     //protected void grd_RowEditing(object sender, GridViewEditEventArgs e)
     //{
     //    //DataView dv = new DataView() ;
     //    DataTable dt = new DataTable();
     //    dt  = (DataTable  )grd.DataSource;
-       
+
     //    PromotionId = Convert .ToInt32 (dt.Rows[e.NewEditIndex]["Id"]);
     //    Session["PromotionId"] = PromotionId;
 
@@ -175,47 +202,65 @@ public partial class Promotions : System.Web.UI.Page
     protected void btnLogin_Click(object sender, EventArgs e)
     {
         SqlCommand cmd = new SqlCommand();
+        SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["TestDBConnection"].ToString());
         try
         {
-        
-        cmd.CommandType = CommandType.StoredProcedure;
+            //cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandType = CommandType.Text;
+            //SqlConnection sqlconn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
 
-        SqlConnection sqlconn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            cmd.CommandText = "INSERT INTO dbo.Promotion ([promotionEvent],[description], [restaurant]) VALUES (@PromotionName, @PromotionDescription, @Restaurant);";
 
-        System.Data.SqlClient.SqlParameter[] sqlparams = new System.Data.SqlClient.SqlParameter[3];
+            cmd.Parameters.AddWithValue("@PromotionName", txtUsername.Text);
+            cmd.Parameters.AddWithValue("@PromotionDescription", txtPassword.Text);
+            cmd.Parameters.AddWithValue("@Restaurant", TextBox1.Text);
 
-        //sqlparams[0] = new System.Data.SqlClient.SqlParameter("@Id", SqlDbType.Int);
-        //sqlparams[0].Value = Session["PromotionId"];        
-        //cmd.Parameters.Add(sqlparams[0]);
-               
-        sqlparams[0] = new System.Data.SqlClient.SqlParameter("@PromotionName", SqlDbType.VarChar );
-        sqlparams[0].Value = txtUsername.Text ;
-        cmd.Parameters.Add(sqlparams[0]);
+            /*
+             System.Data.SqlClient.SqlParameter[] sqlparams = new System.Data.SqlClient.SqlParameter[3];
 
-        sqlparams[1] = new System.Data.SqlClient.SqlParameter("@PromotionDescription", SqlDbType.VarChar );
-        sqlparams[1].Value = txtPassword .Text ;
-        cmd.Parameters.Add(sqlparams[1]);
+             //sqlparams[0] = new System.Data.SqlClient.SqlParameter("@Id", SqlDbType.Int);
+             //sqlparams[0].Value = Session["PromotionId"];        
+             //cmd.Parameters.Add(sqlparams[0]);
 
-        sqlparams[2] = new System.Data.SqlClient.SqlParameter("@HotelName", SqlDbType.VarChar );
-        sqlparams[2].Value = TextBox1 .Text;
-        cmd.Parameters.Add(sqlparams[2]);
+             sqlparams[0] = new System.Data.SqlClient.SqlParameter("@PromotionName", SqlDbType.VarChar);
+             sqlparams[0].Value = txtUsername.Text;
+             cmd.Parameters.Add(sqlparams[0]);
 
-        cmd.CommandText = "sp_AddPromotion";
+             sqlparams[1] = new System.Data.SqlClient.SqlParameter("@PromotionDescription", SqlDbType.VarChar);
+             sqlparams[1].Value = txtPassword.Text;
+             cmd.Parameters.Add(sqlparams[1]);
 
-        cmd.Connection = sqlconn;
-        cmd.Connection.Open();
-        cmd.ExecuteNonQuery();
-        cmd.Connection.Close();
+             sqlparams[2] = new System.Data.SqlClient.SqlParameter("@Restaurant", SqlDbType.VarChar);
+             sqlparams[2].Value = TextBox1.Text;
+             cmd.Parameters.Add(sqlparams[2]);
 
-        BindGrid();
-            txtPassword .Text ="";
-            txtUsername .Text ="";
+             //cmd.CommandText = "sp_AddPromotion";
+             */
+
+            cmd.Connection = sqlConn;
+            cmd.Connection.Open();
+            cmd.ExecuteNonQuery();
+            //cmd.Connection.Close();
+
+            BindGrid();
+            txtPassword.Text = "";
+            txtUsername.Text = "";
             TextBox1.Text = "";
 
         }
-        catch 
+        catch (SqlException sql)
         {
-
+            System.Diagnostics.Debug.WriteLine("sqlException");
+            System.Diagnostics.Debug.WriteLine(sql.StackTrace);
+        }
+        catch (Exception exc)
+        {
+            System.Diagnostics.Debug.WriteLine("Exception in execute query");
+            System.Diagnostics.Debug.WriteLine(exc.StackTrace);
+        }
+        finally
+        {
+            sqlConn.Close();
         }
 
     }

@@ -35,11 +35,12 @@ public partial class PromotionUser : System.Web.UI.Page
         grd.DataSource = null;
 
         SqlCommand cmd = new SqlCommand();
-        cmd.CommandType = CommandType.StoredProcedure;
+        //cmd.CommandType = CommandType.StoredProcedure;
 
-        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["TestDBConnection"].ConnectionString);
 
-        cmd.CommandText = "dbo.sp_GetPromotions";
+        //cmd.CommandText = "dbo.sp_GetPromotions";
+        cmd.CommandText = "SELECT * FROM dbo.Promotion";
 
         cmd.Connection = conn;
         cmd.Connection.Open();
@@ -65,9 +66,11 @@ public partial class PromotionUser : System.Web.UI.Page
             //e.Row.Cells[0].Style["text-align"] = "center";
             e.Row.Cells[1].Style["text-align"] = "center";
             e.Row.Cells[2].Style["text-align"] = "center";
+            e.Row.Cells[3].Style["text-align"] = "center";
+            //e.Row.Cells[3].Style["text-align"] = "center";
             //e.Row.Cells[4].Style["text-align"] = "center";
             //e.Row.Cells[5].Style["text-align"] = "center";
-            e.Row.Cells[3].Style["text-align"] = "center";
+            //e.Row.Cells[3].Style["text-align"] = "center";
 
         }
     }

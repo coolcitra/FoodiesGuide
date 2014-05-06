@@ -30,9 +30,6 @@ public partial class Login1 : System.Web.UI.Page
     }
     protected void btnLogin_Click(object sender, EventArgs e)
     {
-
-        SqlConnection sqlconn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["TestDBConnection"].ConnectionString);
-
         /*
         SqlCommand cmd = new SqlCommand();
         cmd.CommandType = CommandType.StoredProcedure;
@@ -83,27 +80,43 @@ public partial class Login1 : System.Web.UI.Page
 
         string username = txtUsername.Text;
         string password = txtPassword.Text;
+        SqlConnection sqlconn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["TestDBConnection"].ConnectionString);
+        try
+        {
+            string selectString = "SELECT flag " + " FROM dbo.RegisterUser " + " WHERE UserName = '" + username + "' AND password = '" + password + "';";
+            SqlCommand command = new SqlCommand();
+            command.CommandText = selectString;
+            command.Connection = sqlconn;
+            sqlconn.Open();
+            string flag = System.Convert.ToString(command.ExecuteScalar());
+            System.Diagnostics.Debug.WriteLine(flag);
 
-        string selectString = "SELECT UserID " + " FROM dbo.UserPassword " + " WHERE UserName = '" + username + "' AND UserPassword = '" + password + "';";
-        SqlCommand command = new SqlCommand();
-        command.CommandText = selectString;
-        command.Connection = sqlconn;
-        sqlconn.Open();
-        string userId = System.Convert.ToString(command.ExecuteScalar());
-        System.Diagnostics.Debug.WriteLine(userId);
-        sqlconn.Close();
-        if (!string.IsNullOrEmpty(userId))
-        {
-            Session["Result"] = userId;            
-            Session["FirstName"] = txtUsername.Text;
-            Response.Redirect("Restaurants.aspx");
+            if (!string.IsNullOrEmpty(flag))
+            {
+                Session["Result"] = flag;
+                Session["FirstName"] = txtUsername.Text;
+                Response.Redirect("Restaurants.aspx");
+            }
+            else
+            {
+                Session["Result"] = "0";
+                lblError.Visible = true;
+                Session["FirstName"] = "";
+            }
         }
-        else
+        catch (SqlException sql)
         {
-            Session["Result"] = "0";
-            lblError.Visible = true;
-            Session["FirstName"] = "";
+            System.Diagnostics.Debug.WriteLine("sqlException");
+            System.Diagnostics.Debug.WriteLine(sql.StackTrace);
         }
-        
+        catch (Exception exc)
+        {
+            System.Diagnostics.Debug.WriteLine("Exception in execute query");
+            System.Diagnostics.Debug.WriteLine(exc.StackTrace);
+        }
+        finally
+        {
+            sqlconn.Close();
+        }
     }
 }

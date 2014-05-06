@@ -32,23 +32,23 @@ public partial class chinese : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        CalendarBind();
+       // CalendarBind();
     }
-    public void CalendarBind()
-    {
-        CalendarService service = new CalendarService("FoodiesGuide");
-        service.setUserCredentials("foodiessjsu@gmail.com", "foodiessjsu123");
+    //public void CalendarBind()
+    //{
+    //    CalendarService service = new CalendarService("FoodiesGuide");
+    //    service.setUserCredentials("foodiessjsu@gmail.com", "foodiessjsu123");
 
 
-        FeedQuery query = new FeedQuery();
-        query.Uri = new
-                    Uri("http://www.google.com/calendar/feeds/foodiessjsu@gmail.com/private/full");
-        AtomFeed calFeed = service.Query(query);
-        foreach (AtomEntry entry in calFeed.Entries)
-        {
+    //    FeedQuery query = new FeedQuery();
+    //    query.Uri = new
+    //                Uri("http://www.google.com/calendar/feeds/foodiessjsu@gmail.com/private/full");
+    //    AtomFeed calFeed = service.Query(query);
+    //    foreach (AtomEntry entry in calFeed.Entries)
+    //    {
 
-            listBox1.Items.Add(entry.Title.Text);
-        }
-    }
+    //        listBox1.Items.Add(entry.Title.Text);
+    //    }
+    //}
 
 }
