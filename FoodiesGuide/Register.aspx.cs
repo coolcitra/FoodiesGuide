@@ -30,7 +30,7 @@ public partial class Login : System.Web.UI.Page
     }
 
     protected void btnLogin_Click(object sender, System.EventArgs e)
-    {
+    {/*
          SqlCommand cmd = new SqlCommand();
         
         cmd.CommandType = CommandType.StoredProcedure;
@@ -58,5 +58,39 @@ public partial class Login : System.Web.UI.Page
         cmd.ExecuteNonQuery();
         cmd.Connection.Close();
         Response.Redirect("Login1.aspx");
-     }
+      * */
+
+    //Custom code
+        SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["TestDBConnection"].ToString());
+        try
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "insert into RegisterUser ([userName],[email], [password], [flag], [phone]) values (?,?,?,?,?);";
+
+            cmd.Parameters.AddWithValue("@userName", txt1.Text);
+            cmd.Parameters.AddWithValue("@email", TextBox1.Text);
+            cmd.Parameters.AddWithValue("@password", txt2.Text);
+            cmd.Parameters.AddWithValue("@flag", Convert.ToInt32(1));
+            cmd.Parameters.AddWithValue("@phone", TextBox2.Text);
+            cmd.Connection = sqlConn;
+            sqlConn.Open();
+            cmd.ExecuteNonQuery();
+            System.Diagnostics.Debug.WriteLine("Inserted..!");
+        }
+        catch (SqlException sql)
+        {
+            System.Diagnostics.Debug.WriteLine("sqlException");
+            System.Diagnostics.Debug.WriteLine(sql.StackTrace);
+        }
+        catch (Exception exc)
+        {
+            System.Diagnostics.Debug.WriteLine("Exception in execute query");
+            System.Diagnostics.Debug.WriteLine(exc.StackTrace);
+        }
+        finally
+        {
+            sqlConn.Close();
+        }
+    }
 }

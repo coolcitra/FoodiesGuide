@@ -97,10 +97,10 @@
                                 <a href="Restaurants.aspx" style="width: 40px;font-weight: bold;font-size :16px;color :black ">Restaurants</a>
                             </li>
                             <li style="background-image: none;margin-left: 10px">
-                                <a id="aPromo" runat="server" href="#" style="width: 165px;font-weight: bold;font-size :16px;color :black " visible ="false" >Offers</a>
+                                <a id="aPromo" runat="server" href="#" style="width: 165px;font-weight: bold;font-size :16px;color :black " >Offers</a>
                             </li>
                             <li style="background-image: none;margin-left: 5px">
-                                <a id="aReview" runat="server" href="#" style="width: 60px;font-weight: bold;font-size :16px;color :black " visible ="false" >Review</a>
+                                <a id="aReview" runat="server" href="#" style="width: 60px;font-weight: bold;font-size :16px;color :black ">Review</a>
                             </li>
                         </ul>
                     </div>

@@ -21,9 +21,9 @@ using System.Net.Mail;
 using System.Web.Configuration;
 using System.Web.UI.HtmlControls;
 using System.Data.Sql;
-//using GoogleSearchAPI.Query;
-//using GoogleSearchAPI;
-//using GoogleSearchAPI.Resources;
+using GoogleSearchAPI.Query;
+using GoogleSearchAPI;
+using GoogleSearchAPI.Resources;
 
 
 public partial class MasterPage : System.Web.UI.MasterPage
