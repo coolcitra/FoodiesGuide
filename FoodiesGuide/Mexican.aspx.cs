@@ -28,14 +28,12 @@ using Google.GData.Client;
 using Google.GData.Calendar;
 using Google.GData.Extensions;
 
-
-public partial class Indian : System.Web.UI.Page
+public partial class Mexican : System.Web.UI.Page
 {
     DataSet ds = new DataSet();
     protected void Page_Load(object sender, EventArgs e)
     {
-        // BindReview();
-        //CalendarBind();
+       // CalendarBind();
         if (Session["FirstName"] == null)
         {
             txtreview.Visible = false;
@@ -53,7 +51,7 @@ public partial class Indian : System.Web.UI.Page
         try
         {
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["TestDBConnection"].ConnectionString);
-            cmd.CommandText = "SELECT * FROM dbo.reviews WHERE restaurant = 'indian' ";
+            cmd.CommandText = "SELECT * FROM dbo.reviews WHERE restaurant = 'mexican' ";
             cmd.Connection = conn;
             cmd.Connection.Open();
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -107,7 +105,7 @@ public partial class Indian : System.Web.UI.Page
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "INSERT INTO dbo.reviews ([description],[restaurant], [username]) VALUES (@description, @restaurant, @username);";
             cmd.Parameters.AddWithValue("@description", txtreview.Text);
-            cmd.Parameters.AddWithValue("@restaurant", "indian");
+            cmd.Parameters.AddWithValue("@restaurant", "mexican");
             cmd.Parameters.AddWithValue("@username", Session["FirstName"]);
 
             cmd.Connection = sqlConn;
@@ -149,15 +147,5 @@ public partial class Indian : System.Web.UI.Page
 
     //        listBox1.Items.Add(entry.Title.Text);
     //    }
-    //}
-    //public void BindReview()
-    //{
-    //    StringBuilder sb = new StringBuilder();
-    //    sb.Append(string.Empty);
-    //    sb.Append("<div class='loginbox' style='margin-top:100px'>");
-    //    sb.Append("This hotel has a lot of great options for food and service is awesome");
-    //    sb.Append("</div>");
-    //    //holder.Text  = sb.ToString();
-
     //}
 }

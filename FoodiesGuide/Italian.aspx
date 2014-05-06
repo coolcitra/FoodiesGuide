@@ -1,37 +1,41 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Indian.aspx.cs" MasterPageFile="MasterPage.master" Inherits="Indian" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Italian.aspx.cs" MasterPageFile="MasterPage.master" Inherits="Italian" %>
 
 <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="head">
-    <title>Indian</title>
+    <title>Italian</title>
 </asp:Content>
 <asp:Content ID="Content2" runat="server" ContentPlaceHolderID="ContentPlaceHolder1">
 
     <div class="wrapper">
         <div class="container">
 
-            <div class="loginbox" style="width: 960px; height: 370px; margin-top: 60px">
+            <div class="loginbox" style="width: 960px; height: 350px; margin-top: 60px">
                 <%-- <asp:Label ID="holder" runat ="server" ></asp:Label>--%>
 
                 <table>
                     <tr>
                         <td>
-                            <h1>Indian</h1>
+                            <h1>Mio Vicino</h1>
                             <asp:Image ID="Image2" runat="server" ImageUrl="images/rating4.jpg" Width="120" Height="30" />
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <asp:Image ID="Image3" CssClass="loginbox1" runat="server" ImageUrl="images/indianFood.jpg" Width="300" Height="180" />
+                            <asp:Image ID="Image3" CssClass="loginbox1" runat="server" ImageUrl="images/italianFood.jpg" Width="300" Height="180" />
                         </td>
 
                         <td>
                             <div style="float: left; position: relative; width: 550px; font-size: 15px; font-family: 'RobotoLight' ,Sans-Serif; color: black; height: 200px; margin-left: 20px;">
-                                Fun, fresh and contemporary are adjectives that spring to mind when you first come to Rangoli. 
-                                The Indian Place experience is unlike any other Indian restaurant you've ever visited.
+                               The year was 1992 when a talented Italian chef and his business partner opened 
+                                the first Mio Vicino in it's current location on the corner of Benton and Monroe streets in old 
+                                town Santa Clara. Their approach was simple: Create a place where anyone can stop in, 
+                                enjoy the finest Italian food, a premium wine list, relax amid the buzzing atmosphere, 
+                                and come away feeling like they've just visited an old friend for dinner.
                         <br />
                                 <br />
-                                We have the highest commitment to a healthy lifestyle so neither ghee or hydrogenated oils are used in our cooking process.
-                        Where oil is used, we use natural soy oil and in considerably less quantities than you may have come to expect from Indian cuisine.
-                        Find various sweet dishes and enjoy their taste.!
+                                The restaurant even remains privately owned and operated by one of the store's 
+                                original employees! For that reason, you can count on only the highest quality 
+                                ingredients in our original traditional and California-inspired Italian recipesand of 
+                                course our quick, friendly service.
                             </div>
                         </td>
                     </tr>
@@ -39,15 +43,13 @@
                         <td>
                             <br />
                             <div style="float: left; position: relative; font-size: 17px; font-family: 'RobotoLight' ,Sans-Serif; color: black; margin-left: 20px; font-weight: bold">
-                                Cambrian Park
+                                1290 Benton St
                                 <br />
-                                3695 Union Ave
+                                Santa Clara, CA 95050
                                 <br />
-                                San Jose, CA 95124
+                                (408)241-9414
                                 <br />
-                                (408)377-2222
-                                <br />
-                                <a href="http://rangolisanjose.com/">rangolisanjose.com/ </a>
+                                <a href="http://miovicino-santaclara.com/" > miovicino-santaclara.com/ </a>
                             </div>
                         </td>
                     </tr>

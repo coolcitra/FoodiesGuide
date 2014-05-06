@@ -110,7 +110,7 @@
                             <li style="background-image: none;margin-left: 10px">
                                 <a id="aPromo" runat="server" href="#" style="width: 165px;font-size :22px;color :maroon; font-family:'Brush Script MT'" >Offers</a>
                             </li>
-                            <li style="background-image: none;margin-left: 10px">
+                            <li style="background-image: none; margin-top: 0px;">
                                 <a id="aReview" runat="server" href="#" style="width: 60px;font-size :22px;color :maroon; font-family:'Brush Script MT' ">Review</a>
                             </li>
                         </ul>
@@ -118,7 +118,7 @@
 
                     <%--table--%>
                     <div id="welcome_container" class="welcom_container" runat="server" visible="false">
-                        <div class="welcom_lable" style="width: 60px;font-size :22px;color :maroon; font-family:'Brush Script MT' ">
+                        <div class="welcom_lable" style="width: 60px;font-size :16px;color :maroon; font-family:'Brush Script MT'; height: 30px; top: -118px; left: -97px;">
                             <asp:Label ID="lblWelcome" runat="server"></asp:Label>
 
                         </div>

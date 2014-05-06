@@ -59,7 +59,7 @@ public partial class chinese : System.Web.UI.Page
             adapter.Fill(ds);
             grd.DataSource = ds.Tables[0];
             grd.DataBind();
-            grd.HeaderRow.Cells[0].Text = "Reviews";
+            grd.HeaderRow.Cells[1].Text = "Here is what the customers say.!";
         }
         catch (SqlException sql)
         {

@@ -29,7 +29,7 @@ using Google.GData.Calendar;
 using Google.GData.Extensions;
 
 
-public partial class Indian : System.Web.UI.Page
+public partial class Italian : System.Web.UI.Page
 {
     DataSet ds = new DataSet();
     protected void Page_Load(object sender, EventArgs e)
@@ -53,7 +53,7 @@ public partial class Indian : System.Web.UI.Page
         try
         {
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["TestDBConnection"].ConnectionString);
-            cmd.CommandText = "SELECT * FROM dbo.reviews WHERE restaurant = 'indian' ";
+            cmd.CommandText = "SELECT * FROM dbo.reviews WHERE restaurant = 'italian' ";
             cmd.Connection = conn;
             cmd.Connection.Open();
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -107,7 +107,7 @@ public partial class Indian : System.Web.UI.Page
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "INSERT INTO dbo.reviews ([description],[restaurant], [username]) VALUES (@description, @restaurant, @username);";
             cmd.Parameters.AddWithValue("@description", txtreview.Text);
-            cmd.Parameters.AddWithValue("@restaurant", "indian");
+            cmd.Parameters.AddWithValue("@restaurant", "italian");
             cmd.Parameters.AddWithValue("@username", Session["FirstName"]);
 
             cmd.Connection = sqlConn;

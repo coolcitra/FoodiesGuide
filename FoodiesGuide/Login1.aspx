@@ -6,9 +6,9 @@
 <asp:Content ID="content2" runat="server" ContentPlaceHolderID="ContentPlaceHolder1">
     <div class="wrapper">
         <div class="container">
-
+            
             <div class="welcometxt_box">
-                <div class="welcome_txt" style="background-color:coral; width: 400px; margin-left:-390px; font-family:'Brush Script MT'; font-size:28px">
+                <div class="welcome_txt" style="background-color:coral; width: 400px; margin-left:119px;font-family:'Brush Script MT'; font-size:28px">
                   Welcome
                 </div>
             </div>
@@ -21,7 +21,7 @@
                     <label class="labelcontrol" style="font-family:'Brush Script MT'; font-size:23px">
                         Email/User</label> 
                     <div class="label_info">
-                        <asp:TextBox ID="txtUsername" runat="server" BackColor="PowderBlue"></asp:TextBox>&nbsp;&nbsp;
+                        <asp:TextBox ID="txtUsername" runat="server" BackColor="PowderBlue" Width="198px"></asp:TextBox>&nbsp;&nbsp;
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUsername"
                             ErrorMessage="*" ForeColor="Red" ValidationGroup="LoginGroup"></asp:RequiredFieldValidator>
                     </div>
@@ -48,7 +48,7 @@
                     <div class="label_info">
                         <div class="login_btn">
                             <%-- --%>
-                            <asp:LinkButton ID="btnLogin" Text="Login" ValidationGroup="LoginGroup"
+                            <asp:LinkButton ID="btnLogin" Text="Login" font-size="Small" ValidationGroup="LoginGroup"
                                 runat="server" ForeColor="White" OnClick="btnLogin_Click" />
                         </div>
 
@@ -59,8 +59,9 @@
                     You have entered wrong username or password
                 </label>
             </div>
+               
         </div>
-
+        
         <div class="push">
         </div>
     </div>

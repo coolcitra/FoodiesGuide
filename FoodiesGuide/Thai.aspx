@@ -1,10 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Indian.aspx.cs" MasterPageFile="MasterPage.master" Inherits="Indian" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeFile="Thai.aspx.cs" Inherits="Thai" %>
 
-<asp:Content ID="Content1" runat="server" ContentPlaceHolderID="head">
-    <title>Indian</title>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <title>Thai</title>
 </asp:Content>
-<asp:Content ID="Content2" runat="server" ContentPlaceHolderID="ContentPlaceHolder1">
-
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="wrapper">
         <div class="container">
 
@@ -14,24 +13,25 @@
                 <table>
                     <tr>
                         <td>
-                            <h1>Indian</h1>
+                            <h1>Thai Lovers</h1>
                             <asp:Image ID="Image2" runat="server" ImageUrl="images/rating4.jpg" Width="120" Height="30" />
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <asp:Image ID="Image3" CssClass="loginbox1" runat="server" ImageUrl="images/indianFood.jpg" Width="300" Height="180" />
+                            <asp:Image ID="Image3" CssClass="loginbox1" runat="server" ImageUrl="images/ThaiFood.jpg" Width="300" Height="180" />
                         </td>
 
                         <td>
                             <div style="float: left; position: relative; width: 550px; font-size: 15px; font-family: 'RobotoLight' ,Sans-Serif; color: black; height: 200px; margin-left: 20px;">
-                                Fun, fresh and contemporary are adjectives that spring to mind when you first come to Rangoli. 
-                                The Indian Place experience is unlike any other Indian restaurant you've ever visited.
+                                Thai Lovers serves up delightful Asian cuisine sure to please even the most sophisticated Thai tastebuds. 
+                                Available dine-in, to-go, our extensive menu features delicious satay, fried tofu, egg rolls and a 
+                                wide variety of curries, seafood, fried rice, noodles and BBQ entrees. 
                         <br />
                                 <br />
-                                We have the highest commitment to a healthy lifestyle so neither ghee or hydrogenated oils are used in our cooking process.
-                        Where oil is used, we use natural soy oil and in considerably less quantities than you may have come to expect from Indian cuisine.
-                        Find various sweet dishes and enjoy their taste.!
+                                Whether you’re looking for pork, beef, chicken, 
+                                vegetables or tofu, you will be happy with the options and prices we offer. 
+                                And because we use only the freshest ingredients, we know you will be pleased with the taste and quality of whatever you order.
                             </div>
                         </td>
                     </tr>
@@ -39,15 +39,15 @@
                         <td>
                             <br />
                             <div style="float: left; position: relative; font-size: 17px; font-family: 'RobotoLight' ,Sans-Serif; color: black; margin-left: 20px; font-weight: bold">
-                                Cambrian Park
+                                East San Jose
                                 <br />
-                                3695 Union Ave
+                                1111 Story Road, Ste 1009
                                 <br />
-                                San Jose, CA 95124
+                                San Jose, CA 95122
                                 <br />
-                                (408)377-2222
+                                (408)286-7759
                                 <br />
-                                <a href="http://rangolisanjose.com/">rangolisanjose.com/ </a>
+                                <a href= "http://thailovers.orengeo.com/Clients/360195a592a1405a/nvuamznl.aspx"> thailovers.orengeo.com/</a>
                             </div>
                         </td>
                     </tr>
@@ -57,7 +57,7 @@
                 <br />
                 <br />
 
-               <table id="addreviews" runat="server">
+                <table id="addreviews" runat="server">
                         <tr>
                             <td>
                                 <div class="username">
@@ -96,4 +96,6 @@
     </div>
     <div class="push">
     </div>
+
 </asp:Content>
+

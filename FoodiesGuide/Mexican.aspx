@@ -1,10 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Indian.aspx.cs" MasterPageFile="MasterPage.master" Inherits="Indian" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeFile="Mexican.aspx.cs" Inherits="Mexican" %>
 
-<asp:Content ID="Content1" runat="server" ContentPlaceHolderID="head">
-    <title>Indian</title>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <title>Mexican</title>
 </asp:Content>
-<asp:Content ID="Content2" runat="server" ContentPlaceHolderID="ContentPlaceHolder1">
-
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="wrapper">
         <div class="container">
 
@@ -14,40 +13,41 @@
                 <table>
                     <tr>
                         <td>
-                            <h1>Indian</h1>
+                            <h1>La Victoria Taqueria</h1>
                             <asp:Image ID="Image2" runat="server" ImageUrl="images/rating4.jpg" Width="120" Height="30" />
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <asp:Image ID="Image3" CssClass="loginbox1" runat="server" ImageUrl="images/indianFood.jpg" Width="300" Height="180" />
+                            <asp:Image ID="Image3" CssClass="loginbox1" runat="server" ImageUrl="images/mexicanFood.jpg" Width="300" Height="180" />
                         </td>
 
                         <td>
                             <div style="float: left; position: relative; width: 550px; font-size: 15px; font-family: 'RobotoLight' ,Sans-Serif; color: black; height: 200px; margin-left: 20px;">
-                                Fun, fresh and contemporary are adjectives that spring to mind when you first come to Rangoli. 
-                                The Indian Place experience is unlike any other Indian restaurant you've ever visited.
+                               Over the years, it has evolved in to a very popular go to place in the South Bay.  
+                                From breakfast burrito to your typical carne asada super or regular tacos, La Vic’s food is unique in every way. 
+                                 First of all, the food is incredibly tasty and served fresh at all times.  
+                                Secondly, the price is right and third but certainly not least, La Vic’s is the only place on the planet that serves the Orange Sauce.
                         <br />
                                 <br />
-                                We have the highest commitment to a healthy lifestyle so neither ghee or hydrogenated oils are used in our cooking process.
-                        Where oil is used, we use natural soy oil and in considerably less quantities than you may have come to expect from Indian cuisine.
-                        Find various sweet dishes and enjoy their taste.!
+                               Yes, the Orange Sauce is what La Vic’s is well known for. 
+                                 If you have not had La Vic’s, you need to get your self to one of the five locations in the Bay Area and order anything on the menu but don’t forget to ask for the Orange sauce.
                             </div>
-                        </td>
+                        </td> 
                     </tr>
                     <tr>
                         <td>
                             <br />
                             <div style="float: left; position: relative; font-size: 17px; font-family: 'RobotoLight' ,Sans-Serif; color: black; margin-left: 20px; font-weight: bold">
-                                Cambrian Park
+                                Downtown
                                 <br />
-                                3695 Union Ave
+                                140 E San Carlos St
                                 <br />
-                                San Jose, CA 95124
+                                San Jose, CA 95112
                                 <br />
-                                (408)377-2222
+                                (408)298-5335
                                 <br />
-                                <a href="http://rangolisanjose.com/">rangolisanjose.com/ </a>
+                                <a href="http://www.lavicsj.com/LaVictoria.html"> lavicsj.com/ </a>
                             </div>
                         </td>
                     </tr>
@@ -96,4 +96,6 @@
     </div>
     <div class="push">
     </div>
+
 </asp:Content>
+

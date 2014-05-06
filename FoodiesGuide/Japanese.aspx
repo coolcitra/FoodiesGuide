@@ -55,36 +55,39 @@
                 <br />
 
                 <table id="addreviews" runat="server">
-                    <tr>
-                        <td>
-                            <div class="username">
-                                <label class="labelcontrol">
-                                    Add Review</label>
-                                <div style="overflow: auto; height: 62px; width: 250px;">
-                                    <asp:TextBox ID="txtreview" Height="62px" runat="server" Width="271px" MaxLength="100"></asp:TextBox>&nbsp;&nbsp;
-                                </div>
-                            </div>
-
-                            <div class="username">
-                                <div class="label_info">
-                                    <div class="login_btn">
-                                        <asp:LinkButton ID="addReview" Text="Add" ValidationGroup="LoginGroup"
-                                            runat="server" ForeColor="White" OnClick="addReview_Click" />
+                        <tr>
+                            <td>
+                                <div class="username">
+                                    <label class="labelcontrol">
+                                        Add Review</label>
+                                    <div style="overflow: auto; height: 62px; width: 250px;">
+                                        <asp:TextBox ID="txtreview" Height="62px" runat="server" Width="271px" MaxLength="100"></asp:TextBox>&nbsp;&nbsp;
                                     </div>
                                 </div>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
 
-                <br />
-                <div style="float: left; position: relative; font-size: 17px; font-family: 'RobotoLight' ,Sans-Serif; color: black; height: 200px; margin-left: 20px; font-weight: bold; top: 26px; left: -15px;">
-                    Reviews
-                    <asp:GridView ID="grd" runat="server" AllowPaging="True" HeaderStyle-CssClass="hdrGrid" RowStyle-CssClass="rowGrid" CssClass="grdCourse" OnRowDataBound="grd_RowDataBound">
+                                <div class="username">
+                                    <div class="label_info">
+                                        <div class="login_btn">
+                                            <asp:LinkButton ID="addReview" Text="Add" ValidationGroup="LoginGroup"
+                                                runat="server" ForeColor="White" OnClick="addReview_Click" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <br />
+                    <div style="float: left; position: relative; font-size: 17px; font-family: 'RobotoLight' ,Sans-Serif; 
+                        color: black; height: 200px; margin-left: 20px; font-weight: bold; top: 26px; left: -15px;">
+                        Reviews
+                    <asp:GridView ID="grd" runat="server" AllowPaging="True" Width="700px"
+                        HeaderStyle-CssClass="hdrGrid" RowStyle-CssClass="rowGrid" 
+                        CssClass="grdCourse" OnRowDataBound="grd_RowDataBound">
                         <Columns>
                         </Columns>
                     </asp:GridView>
-                </div>
+                    </div>
             </div>
         </div>
     </div>
