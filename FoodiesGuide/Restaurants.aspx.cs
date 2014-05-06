@@ -23,4 +23,16 @@ public partial class Hotels : System.Web.UI.Page
     {
         Response.Redirect("Japanese.aspx");
     }
+    protected void img4_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Thai.aspx");
+    }
+    protected void img5_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Mexican.aspx");
+    }
+    protected void img6_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Italian.aspx");
+    }
 }

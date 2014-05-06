@@ -76,7 +76,7 @@ form
 }
 .push
 {
-	height: 20px;
+	height: 11px;
 	clear: both;
 }
 
@@ -296,6 +296,7 @@ h1
 	color: #8a8c8f;
 	display: table;
 	margin-top: 20px;
+    width: 362px;
 }
 .labelcontrol
 {
@@ -315,8 +316,6 @@ h1
 }
 .label_info input[type="text"]
 {
-	width: 200px;
-	height: 20px;
 	background-color: #FFFFFF;
 	padding: 2px 2px;
 	vertical-align: middle;
@@ -372,6 +371,8 @@ h1
 	font-weight: normal;
 	color: #FFF;
 	clear: both;
+    height: 13px;
+    width: 65px;
 }
 
 .login_btn:hover

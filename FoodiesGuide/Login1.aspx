@@ -8,20 +8,20 @@
         <div class="container">
 
             <div class="welcometxt_box">
-                <div class="welcome_txt">
-                    Welcome
+                <div class="welcome_txt" style="background-color:coral; width: 400px; margin-left:-390px; font-family:'Brush Script MT'; font-size:28px">
+                  Welcome
                 </div>
             </div>
-            <div class="loginbox" style="width: 370px">
+            <div class="loginbox" style="width: 370px; background-color:beige; border-color:coral">
                 <div class="logintxt_box">
-                    <h1>Login
+                    <h1 style="font-family:'Brush Script MT'; font-size:25px">Login
                     </h1>
                 </div>
                 <div class="username">
-                    <label class="labelcontrol">
-                        Email/User</label>
+                    <label class="labelcontrol" style="font-family:'Brush Script MT'; font-size:23px">
+                        Email/User</label> 
                     <div class="label_info">
-                        <asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>&nbsp;&nbsp;
+                        <asp:TextBox ID="txtUsername" runat="server" BackColor="PowderBlue"></asp:TextBox>&nbsp;&nbsp;
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUsername"
                             ErrorMessage="*" ForeColor="Red" ValidationGroup="LoginGroup"></asp:RequiredFieldValidator>
                     </div>
@@ -29,10 +29,10 @@
 
 
                 <div class="username">
-                    <label class="labelcontrol">
+                    <label class="labelcontrol" style="font-family:'Brush Script MT'; font-size:23px">
                         Password</label>
                     <div class="label_info">
-                        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>&nbsp;&nbsp;
+                        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" BackColor="PowderBlue"></asp:TextBox>&nbsp;&nbsp;
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtPassword"
                             ErrorMessage="*" ForeColor="Red" ValidationGroup="LoginGroup"></asp:RequiredFieldValidator>
                     </div>

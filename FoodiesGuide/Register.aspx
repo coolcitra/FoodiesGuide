@@ -8,58 +8,57 @@
     <div class="wrapper">
         <div class="container">
             <div class="welcometxt_box">
-                <div class="welcome_txt">
-                    Welcome
+                <div class="welcome_txt" style="background-color:coral; width: 400px; margin-left:-390px; font-family:'Brush Script MT'; font-size:28px">
+                  Welcome
                 </div>
             </div>
-            <div class="loginbox">
+            <div class="loginbox" style="width: 370px; background-color:beige; border-color:coral">
                 <div class="logintxt_box">
-                    <h1>
-                        Register
+                    <h1 style="font-family:'Brush Script MT'; font-size:25px">Register
                     </h1>
                 </div>
                 <div class="username">
-                    <label class="labelcontrol">
+                    <label class="labelcontrol" style="font-family:'Brush Script MT'; font-size:23px">
                         Name</label>
                     <div class="label_info">
-                        <asp:TextBox ID="txt1" runat="server" ></asp:TextBox>&nbsp;&nbsp;
+                        <asp:TextBox ID="txt1" runat="server" BackColor="PowderBlue"></asp:TextBox>&nbsp;&nbsp;
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txt1"
                             ErrorMessage="*" ForeColor="Red" ValidationGroup="LoginGroup"></asp:RequiredFieldValidator>
                     </div>
                 </div>
                 <div class="username">
-                    <label class="labelcontrol">
+                    <label class="labelcontrol" style="font-family:'Brush Script MT'; font-size:23px">
                         Email</label>
                     <div class="label_info">
-                        <asp:TextBox ID="TextBox1" runat="server" ></asp:TextBox>&nbsp;&nbsp;
+                        <asp:TextBox ID="TextBox1" runat="server" BackColor="PowderBlue"></asp:TextBox>&nbsp;&nbsp;
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1"
                             ErrorMessage="*" ForeColor="Red" ValidationGroup="LoginGroup"></asp:RequiredFieldValidator>
                     </div>
                 </div>
                 <div class="username">
-                    <label class="labelcontrol">
+                    <label class="labelcontrol" style="font-family:'Brush Script MT'; font-size:23px">
                         Phone Number</label>
                     <div class="label_info">
-                        <asp:TextBox ID="TextBox2" runat="server" ></asp:TextBox>&nbsp;&nbsp;
+                        <asp:TextBox ID="TextBox2" runat="server" BackColor="PowderBlue"></asp:TextBox>&nbsp;&nbsp;
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox2"
                             ErrorMessage="*" ForeColor="Red" ValidationGroup="LoginGroup"></asp:RequiredFieldValidator>
                     </div>
                 </div>
 
                 <div class="username">
-                    <label class="labelcontrol">
+                    <label class="labelcontrol" style="font-family:'Brush Script MT'; font-size:23px">
                         Password</label>
                     <div class="label_info">
-                        <asp:TextBox ID="txt2" runat="server" TextMode="Password" ></asp:TextBox>&nbsp;&nbsp;
+                        <asp:TextBox ID="txt2" runat="server" TextMode="Password" BackColor="PowderBlue"></asp:TextBox>&nbsp;&nbsp;
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txt2"
                             ErrorMessage="*" ForeColor="Red" ValidationGroup="LoginGroup"></asp:RequiredFieldValidator>
                     </div>
                 </div>
                 <div class="username">
-                    <label class="labelcontrol">
+                    <label class="labelcontrol" style="font-family:'Brush Script MT'; font-size:23px">
                         Confirm Password</label>
                     <div class="label_info">
-                        <asp:TextBox ID="TextBox3" runat="server" TextMode="Password" ></asp:TextBox>&nbsp;&nbsp;
+                        <asp:TextBox ID="TextBox3" runat="server" TextMode="Password" BackColor="PowderBlue"></asp:TextBox>&nbsp;&nbsp;
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="TextBox3"
                             ErrorMessage="*" ForeColor="Red" ValidationGroup="LoginGroup"></asp:RequiredFieldValidator>
                     </div>

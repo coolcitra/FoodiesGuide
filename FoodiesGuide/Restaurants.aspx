@@ -35,7 +35,7 @@
                 <tr>
                     <td>
                         <div>
-                            <asp:ImageButton ID="ImageButton1" CssClass="imgH" runat="server" ImageUrl="images/ThaiFood.jpg" Height="300px" Width="300px" />
+                            <asp:ImageButton ID="img4" CssClass="imgH" runat="server" ImageUrl="images/ThaiFood.jpg" OnClick="img4_Click" Height="300px" Width="300px" />
                         </div>
                         <div>
                             <b>Thai Cuisine</b>
@@ -43,7 +43,7 @@
                     </td>
                     <td>
                         <div>
-                            <asp:ImageButton ID="ImageButton2" CssClass="imgH" runat="server" ImageUrl="images/mexicanFood.jpg" Height="300px" Width="300px" />
+                            <asp:ImageButton ID="img5" CssClass="imgH" runat="server" ImageUrl="images/mexicanFood.jpg" OnClick="img5_Click" Height="300px" Width="300px" />
                         </div>
                         <div>
                             <b>Mexican Cuisine</b>
@@ -51,7 +51,7 @@
                     </td>
                     <td>
                         <div>
-                            <asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="images/italianFood.jpg" CssClass="imgH" Height="300px" Width="300px" />
+                            <asp:ImageButton ID="img6" runat="server" ImageUrl="images/italianFood.jpg" CssClass="imgH" OnClick="img6_Click" Height="300px" Width="300px" />
                         </div>
                         <div>
                             <b>Italian Cuisine</b>

@@ -31,10 +31,11 @@ public partial class PromotionUser : System.Web.UI.Page
     }
     public void BindGrid()
     {
-
         grd.DataSource = null;
 
         SqlCommand cmd = new SqlCommand();
+        try
+        {
         //cmd.CommandType = CommandType.StoredProcedure;
 
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["TestDBConnection"].ConnectionString);
@@ -47,7 +48,7 @@ public partial class PromotionUser : System.Web.UI.Page
         SqlDataAdapter adapter = new SqlDataAdapter(cmd);
 
         adapter.Fill(ds);
-        cmd.Connection.Close();
+       // cmd.Connection.Close();
 
         grd.DataSource = ds.Tables[0];
         grd.DataBind();
@@ -56,6 +57,21 @@ public partial class PromotionUser : System.Web.UI.Page
         grd.HeaderRow.Cells[2].Text = "Description";
         grd.HeaderRow.Cells[3].Text = "Restaurant";
         // grd.HeaderStyle.HorizontalAlign = HorizontalAlign.Center;
+        }
+        catch (SqlException sql)
+        {
+            System.Diagnostics.Debug.WriteLine("sqlException");
+            System.Diagnostics.Debug.WriteLine(sql.StackTrace);
+        }
+        catch (Exception exc)
+        {
+            System.Diagnostics.Debug.WriteLine("Exception in execute query");
+            System.Diagnostics.Debug.WriteLine(exc.StackTrace);
+        }
+        finally
+        {
+            cmd.Connection.Close();
+        }
     }
 
     protected void grd_RowDataBound(object sender, GridViewRowEventArgs e)
